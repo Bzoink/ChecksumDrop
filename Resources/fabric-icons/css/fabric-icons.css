@@ -1,0 +1,30 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at https://aka.ms/fabric-assets-license
+*/
+@font-face {
+  font-family: 'FabricMDL2Icons';
+  src: url('../fonts/fabric-icons-6c64f64d.woff') format('woff');
+}
+
+.ms-Icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'FabricMDL2Icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+}
+
+.ms-Icon--Settings:before { content: "\E713"; }
+.ms-Icon--Attach:before { content: "\E723"; }
+.ms-Icon--Accept:before { content: "\E8FB"; }
+.ms-Icon--Repair:before { content: "\E90F"; }
+.ms-Icon--EmojiDisappointed:before { content: "\EA88"; }
+.ms-Icon--StatusErrorFull:before { content: "\EB90"; }
+.ms-Icon--AddTo:before { content: "\ECC8"; }
+.ms-Icon--ExploreContent:before { content: "\ECCD"; }
+.ms-Icon--CirclePauseSolid:before { content: "\F2D8"; }
+.ms-Icon--CirclePause:before { content: "\F2D9"; }
+.ms-Icon--MSNVideosSolid:before { content: "\F2DA"; }
+.ms-Icon--CircleStopSolid:before { content: "\F2DB"; }

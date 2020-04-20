@@ -1,0 +1,1 @@
+pdsfv.exe /reg

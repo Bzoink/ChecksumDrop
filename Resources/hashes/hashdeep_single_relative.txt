@@ -1,0 +1,6 @@
+%%%% HASHDEEP-1.0
+%%%% size,md5,sha256,filename
+## Invoked from: /home/tony/Dokument
+## $ hashdeep -l nano-4.7.zip
+## 
+5359979,5d723b01a5893f33bd1b757754a7c3ab,541ef5ef685153b002b72682182cbf0edec7bb03cb8b7b604292fb44a6c91eed,nano-4.7.zip

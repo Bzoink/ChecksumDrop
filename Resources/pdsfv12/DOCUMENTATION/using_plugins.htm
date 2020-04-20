@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Using the FTP server plugins&nbsp;&nbsp; Using pdSFV within glFTPd</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">Using the FTP server plugins</font></b></p>
+<p><br>
+<b>Using pdSFV within glFTPd:</b>&nbsp;<br>
+<br>
+glFTPd version 1.18 and higher comes with pdSFV built in, calculating the CRC checksum of files already while
+they are uploaded. This is called sfv-on-the-fly calculation and saves a lot of time, that is the time that would be
+needed to re-read the whole uploaded file from your zipscript in order to perform the SFV check.
+Especially sites with IDE hard disks will notice a major improvement in upload speed when using sfv-on-the-fly checking. Because
+configuration of sfv-on-the-fly checking tends to change as often as the other parts of glFTPd’s configuration with
+new versions, please refer to glFTPd’s documentation for details on how to set
+it up on your site. glFTPd is available from http://www.glftpd.org or #glftpd on EfNet and “calc_crc” is the configuration keyword you should be looking
+for.&nbsp;</p>
+<p><br>
+<b>Using pdSFV with other Linux/Unix FTP demons<br>
+</b><br>
+Basically you will need an external hook after a file is uploaded, usually this is a shellscript called post-check,
+zipscript or upload-processor. Usually this script gets some parameters, with one of them being the name of the file uploaded. On RAR– or MP3-Uploads you can use pdSFV to check the integrity of the uploaded file
+by using:<br>
+<br>
+<i>/path/to/pdsfv –t *.[sS][fF][vV] $1</i><br>
+<br>
+($1 is the first parameter passed to the shellscript, we assume this is the name of the uploaded file here). pdsfv will
+exit with errorlevel 0 if the file is OK, with errorlevel 1 otherwise. Complete example:<br>
+<br>
+<font face="Courier New" size="2">if /path/to/pdsfv –t *.[sS][fF][vV] $1 ; then<br>
+   echo “File is good!”<br>
+   exit 0<br>
+else<br>
+   echo “File is bad!”<br>
+   exit 1<br>
+fi<br>
+</font><br>
+<br>
+<b>Using pdSFV with Windows FTP server programs<br>
+</b><br>
+Unfortunately this still is the least tested section of pdSFV for the simple reason that we don’t know of any good
+ISO/VCD/MP3 site running a on Windows box. If you’re running one and get the stuff to work please contribute to this documentation by sharing some hints with us.<br>
+<br>
+Basically your FTP server program must be able to run an external program after a (RAR or MP3) file is uploaded.
+It also should be able to pass parameters to this external program (like the path and the name of the uploaded file),
+which is the “filecheck.exe” command line utility described earlier in this documentation or a
+wrapper batchfile which executes filecheck.exe and reacts on its errorlevel for example by deleting bad uploads.&nbsp;&nbsp;</p>
+<p><br>
+Good luck ;-)<br>
+</p>
+
+</body>
+
+</html>

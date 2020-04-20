@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Using the Linux/Unix version</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">Using the LINUX / UNIX version</font></b></p>
+<p><br>
+This version is distributed as source only, meaning you have to compile it yourself. It should be easy to compile and
+running under any UNIX system there is, at least so far we didn’t find a single UNIX system where it didn’t work.<br>
+<br>
+To compile it, you will need an ANSI-C compatible C compiler installed on your system. Almost all unix systems fulfill
+this condition. If there is no C compiler installed on your system, beg your administrator to install one for you. If you
+are your own administrator, don’t have a C compiler installed and don’t know how to install
+one, try installing Windows and use the other version of pdSFV :-) OK, just kidding… compile the source using</p>
+<p align="center"><i>                                                      gcc –o pdsfv pdsfv.c</i></p>
+<p align="left">If you don’t have GNU C installed on your system, try using “cc” with the same command line parameters. It should
+compile without any errors or warnings and you should get a “pdsfv” binary in the current directory. It is a good idea
+to copy it into a directory which is in your PATH. If you have root access, copy it to
+/usr/bin or similar. If you are normal user only and have a subdir “bin” in your homedir, try putting the stuff there. If both of them fail you’ll have to
+type the full pathname to pdsfv everytime, so maybe you want to try the alias command for it :)<br>
+<br>
+Running pdsfv without any command line parameters will display a short help page.</p>
+<p align="center"><br>
+<b>Creating SFV Files</b></p>
+<p align="left">Basically this is done using the –c command line option. For example:<br>
+<br>
+<i>pdsfv –c myrelease.sfv myrelease.r??<br>
+</i><br>
+will create a new sfv file called myrelease.sfv and list all files of the RAR-archive “myrelease” there.<br>
+<br>
+Use the –d option to add size &amp; date stamps as comments to the SFV file and –l to add your group’s logo:<br>
+<br>
+<i>pdsfv –d -c myrls.sfv -l /home/lamer/mygroup.nfo myrls.r*<br>
+</i><br>
+By default, pdSFV in its unix version will only add files which are part of a RAR archive or MP3 files to the SFV
+file. This is how it should be. If you really want to add all files that match the filemask you give on the command line,
+for example even NFO and JPG files, use the –a switch.<br>
+<br>
+<i>pdsfv -c myrelease.sfv -a myrls.*<br>
+</i><br>
+for example would also add “myrls.nfo” to the SFV file and not only “myrls.rar, myrls.r00 etc.” . As described in the
+Windows GUI section, this generally is a pretty damn bad idea, so you will hardly use it.<br>
+<br>
+WIN-SFV compatibility mode is activated by using the –w switch. As stated in
+the Windows section, this is considered unnecessary nowadays and you only should use it if you
+have a special reason for it.</p>
+<p align="center"><br>
+<br>
+<b>Testing individual files</b></p>
+<p align="left">One or more files can be tested by using the –t operating mode, which needs the name of the SFV file to use passed
+and accepts a list of files you want to have tested.<br>
+<br>
+<i>pdsfv -t myrls.sfv myrls.rar myrls.r00<br>
+</i><br>
+for example will test two files, myrls.rar and myrls.r00 . For shellscripts: errorlevel is 0 if all files were OK, 1 if there
+was at least one bad file. If you want to use pdSFV with your FTP site, check out the
+developer section of this documentation. Of course you can use wildcards as
+filenames, like myrls.r* ... you should consider using the following option
+though:</p>
+<p align="center"><b>Testing whole releases</b></p>
+<p align="left">Checking all files listed in a SFV file can be done by using the –T operating mode. For example<br>
+<br>
+<i>pdsfv –T myrls.sfv<br>
+</i><br>
+will test all files listed in myrls.sfv and tell you which files are good, bad or missing. Bad means the file on your harddisk has a different checksum than listed in the
+SFV file. Missing means there is a file listed in the SFV which was not found on your hard disk.&nbsp;<br>
+<br>
+For shellscripts: errorlevel is 0 if all files are good, 1 if there is at least one file bad, 2 if there is at least one file
+missing.</p>
+<p align="left">&nbsp;</p>
+<p align="center"><b>Counting files</b></p>
+<p align="left">You can use pdsfv to count how many files are listed in a SFV file, how many of them you do have on your hard
+disk yet, and how many aren’t there yet. The output may look a bit weird if you run it interactively but this operating mode is mainly intended for shellscripts. For example:<br>
+<br>
+---<br>
+<i>pdsfv -m myrls.sfv<br>
+</i><br>
+<font face="Courier New" size="2">Performing completion check...<br>
+[total files listed] [local files] [missing files]<br>
+4<br>
+3<br>
+1<br>
+</font>---<br>
+<br>
+To get the number of files existing locally (3 in our example), you could use some script like:<br>
+<br>
+<font face="Courier New" size="2">NUMLOCAL=`pdsfv -m myrls.sfv | tail -n 2 | head -n 1`<br>
+echo "$NUMLOCAL files of this release have arrived yet!"<br>
+</font><br>
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+/*
+  Your use of the content in the files referenced here is subject to the terms of the license at https://aka.ms/fabric-assets-license
+*/
+@font-face {
+  font-family: 'FabricMDL2Icons';
+  src: url('../fonts/fabric-icons-6c64f64d.woff') format('woff');
+}
+
+.ms-Icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'FabricMDL2Icons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+}
+
+// Mixins
+@mixin ms-Icon--Settings { content: "\E713"; }
+@mixin ms-Icon--Attach { content: "\E723"; }
+@mixin ms-Icon--Accept { content: "\E8FB"; }
+@mixin ms-Icon--Repair { content: "\E90F"; }
+@mixin ms-Icon--EmojiDisappointed { content: "\EA88"; }
+@mixin ms-Icon--StatusErrorFull { content: "\EB90"; }
+@mixin ms-Icon--AddTo { content: "\ECC8"; }
+@mixin ms-Icon--ExploreContent { content: "\ECCD"; }
+@mixin ms-Icon--CirclePauseSolid { content: "\F2D8"; }
+@mixin ms-Icon--CirclePause { content: "\F2D9"; }
+@mixin ms-Icon--MSNVideosSolid { content: "\F2DA"; }
+@mixin ms-Icon--CircleStopSolid { content: "\F2DB"; }
+
+
+// Classes
+.ms-Icon--Settings:before { @include ms-Icon--Settings }
+.ms-Icon--Attach:before { @include ms-Icon--Attach }
+.ms-Icon--Accept:before { @include ms-Icon--Accept }
+.ms-Icon--Repair:before { @include ms-Icon--Repair }
+.ms-Icon--EmojiDisappointed:before { @include ms-Icon--EmojiDisappointed }
+.ms-Icon--StatusErrorFull:before { @include ms-Icon--StatusErrorFull }
+.ms-Icon--AddTo:before { @include ms-Icon--AddTo }
+.ms-Icon--ExploreContent:before { @include ms-Icon--ExploreContent }
+.ms-Icon--CirclePauseSolid:before { @include ms-Icon--CirclePauseSolid }
+.ms-Icon--CirclePause:before { @include ms-Icon--CirclePause }
+.ms-Icon--MSNVideosSolid:before { @include ms-Icon--MSNVideosSolid }
+.ms-Icon--CircleStopSolid:before { @include ms-Icon--CircleStopSolid }
+

@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Using the Windows GUI version</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">Using the Windows GUI version</font></b></p>
+<p><br>
+The Windows version with the graphical user interface is the one most of you will use. It tries to bring some comfort
+into working with SFV files “at home” at a still high level of performance. Compared to prior releases of pdSFV you
+will notice some major changes in the interface, mostly getting rid of some unnecessary
+graphics.&nbsp;<br>
+<br>
+To start pdSFV, simply run <i> pdsfv.exe</i> . You can create an icon for that on your desktop if you want. If you figure
+out that you like pdSFV and would like to use it permanently as your SFV tool of choice, you can associate .sfv file
+extension with pdSFV. To do so, run pdsfv with the /reg command line parameter:&nbsp;</p>
+<p align="center"><br>
+<i>                                                        pdsfv.exe /reg</i></p>
+<p align="left"><br>
+<br>
+You only need to do this once. pdSFV will tell you that it successfully registered itself with .sfv files. If you don’t
+know how to run a program with a command line parameter (doh!), you can use the <i> associate.bat</i> batchfile to do
+this job.<br>
+<br>
+After doing so there are two ways to start pdSFV: either run it by starting pdsfv.exe (or clicking on your desktop
+icon, or whatever), or double-clicking on any SFV file e.g. in your Windows Explorer (you also can select the
+“perform SFV check” option in the popup menu you get when using the right mouse
+button).&nbsp;</p>
+<p><br>
+If you run it by double-clicking on a SFV file, you’ll first see a window popping up displaying the contents of the
+SFV file. As you can see SFV files are plain ASCII files with not too much content – the viewer is mainly intended
+to let you have a quick glance at the SFV file even if you don’t want a complete check
+performed. This is useful if you download a SFV file only from a FTP site e.g. to count how many files are listed in it so you figure out how
+much you have to download. The SFV file viewer gives you the choice between quitting (in case you only wanted to
+have a look at the SFV file) and performing a full-scale SFV check on all files listed in there – this is your option
+when you already have downloaded the release and want to check it right now – we’ll get into that a little bit
+later.</p>
+<p><br>
+<br>
+If you start pdsfv the regular way you’ll see a screen with version information etc. On the bottom of the screen you
+can choose your action: create a sfv file, check a whole release, or check individual files. Click onto the action you
+want to perform. Each of the action screens has a help section on the left which should guide
+you through the process. After some time you should get used to it.<br>
+<br>
+Clicking on the minimize-icon in the upper right will minimize pdSFV to the traybar, this is the small area where your
+Windows clock sits. Click on the mini - pdSFV icon there to restore pdSFV’s screen. You can exit pdSFV by
+clicking on the “close” symbol on the upper right of the window, right next to the minimize
+symbol. You should know these two from standard Windows applications yet :)&nbsp;</p>
+<p><br>
+Basically, creating a SFV file takes the following steps: first choose a name for your SFV file. You either can enter
+one in the text field or click on the button to browse through your directories. Then specify the name of your banner
+file / group logo, if you have one. The logo will be added as comment to the SFV
+file. If you don’t have one, simply leave this field blank. Now there are two options, the first one is whether to include size &amp; time stamps of the files to
+SFV file. It is enabled by default in spite of the fact this information is pretty useless and often gets lost when
+distributed via FTP sites. How this information can be used is described in the
+developer section of this documentation, if you don’t know whether you need it, just leave the option turned on. The second option is backward
+compatibility to WIN-SFV. It is turned off by default because we consider it unnecessary nowadays, only turn it on if you really
+need to, since it unnecessarily implies restrictions to the SFV file format. Then you can add the files
+you want to be listed in the SFV file to the list of files to be processed. This can
+be done by browsing through the directories and add either whole directories or single files by double-clicking on them. Please notice that you should only add files part of a RAR archive or MP3 files to your SFV files. Adding files
+like .NFO, .ZIP, .JPG there is pretty stupid because FTP sites do not perform SFV checks on these files, so just
+leave them out. Once you’re done, click on the “create now” button and watch the progress. That’s it :)</p>
+<p><br>
+<br>
+Checking a whole release is the easiest operation. All you have to do is to select a SFV file and click on the
+“check now” button. It will crc-check all files listed in the SFV file you picked and tell you about each file whether it
+is good, bad, or missing. Bad means you have a file on your hard disk but its CRC doesn’t match
+with the one listed in the SFV file. Missing means there is a file listed in the SFV which isn’t there on your hard disk. Probably you have
+forgotten to download it or the release was incomplete on the site you downloaded it from. There is a second status window in which only bad and missing files will be listed. This should make
+it even easier for you to overlook the situation and figure out which files you still have to
+(re-)download.&nbsp;</p>
+<p><br>
+Checking individual files takes slightly more time to set up but it is faster if you don’t want to check a whole release
+but only files you e.g. re-downloaded because an old version was bad. First select the SFV file you want to
+use. Then add the files you want to be checked to the list of files to be processed the same way as in
+SFV creation mode. Finally, click on the “check now” button and only the files you selected will be CRC-checked. The output will
+tell you which of them are good and which are (still) bad.<br>
+</p>
+
+</body>
+
+</html>

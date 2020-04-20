@@ -1,0 +1,58 @@
+{
+  "fontName": "fabric-icons",
+  "fontFamilyName": "FabricMDL2Icons",
+  "excludeGlyphs": false,
+  "excludeThirdPartyIcons": false,
+  "chunkSubsets": false,
+  "hashFontFileName": true,
+  "glyphs": [
+    {
+      "name": "Settings",
+      "unicode": "E713"
+    },
+    {
+      "name": "Attach",
+      "unicode": "E723"
+    },
+    {
+      "name": "Accept",
+      "unicode": "E8FB"
+    },
+    {
+      "name": "Repair",
+      "unicode": "E90F"
+    },
+    {
+      "name": "EmojiDisappointed",
+      "unicode": "EA88"
+    },
+    {
+      "name": "StatusErrorFull",
+      "unicode": "EB90"
+    },
+    {
+      "name": "AddTo",
+      "unicode": "ECC8"
+    },
+    {
+      "name": "ExploreContent",
+      "unicode": "ECCD"
+    },
+    {
+      "name": "CirclePauseSolid",
+      "unicode": "F2D8"
+    },
+    {
+      "name": "CirclePause",
+      "unicode": "F2D9"
+    },
+    {
+      "name": "MSNVideosSolid",
+      "unicode": "F2DA"
+    },
+    {
+      "name": "CircleStopSolid",
+      "unicode": "F2DB"
+    }
+  ]
+}

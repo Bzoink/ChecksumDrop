@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>SFV history</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">A short trip to history</font></b></p>
+<p align="left"><b><font size="6"><br>
+</font></b>SFV files are used in mainly two areas nowadays: distribution of ISO/VCD releases and distribution of MP3 files via
+FTP servers by groups tending to refer to themselves as “scene”. While using file formats like ZIP to spread stuff can rely on the good speed of the ZIP algorithm to verify small files’ integrity, neither the
+format of ISO/VCD releases – RAR archive chunks usually 15 MB in size – nor MP3 files have an built-in, high-performance option to check
+whether the file uploaded to a FTP site or downloaded to your home is identical with the file on the other side or
+even the original files made by the packager.&nbsp;<br>
+<br>
+Because of this lack of possibilities SFV files were invented. A SFV file basically is a list of files which belong to a
+“release” including a checksum for each of these files. Using this checksum it is easy to verify that the files received at location B are identical to those
+the sender at location A has. The simple algorithm used in SFV files makes sure that two files never (with “never” meaning that it is
+pretty unprobable) have the same checksum if they are not identical.&nbsp;<br>
+<br>
+In the early days of SFV files there was only one tool used by almost everyone, simply called “SFV” with the
+Windows version called “WIN-SFV” and the Unix pedant “SFV*NIX”. Everyone was happy with those until SFV files became more and more popular and – especially MP3 groups – started using their own tools
+to create SFV files. Some MP3 groups even had tools ripping an audio CD, converting it to MP3s, creating a SFV file for them
+and uploading it to a FTP site fully automated.&nbsp;<br>
+<br>
+Problems emerged when the mass of end-users had to find out that those SFV files could not be processed by
+WIN-SFV and SFV*NIX. This was because those two SFV file utils added their name as comment into the SFV files they created. The tricky point is that they refused to process any other SFV files, i.e. SFV files
+not created by WIN-SFV or SFV*NIX. Thus, unless the other SFV creating utilities pretended to be WIN-SFV, the end user had
+a hard time performing SFV checks.<br>
+<br>
+About the same time some ISO/VCD topsites started adding banners and logos of their own to SFV files – as
+comments (see the discussion of the SFV file format later). Other topsites’ countermeasures “of
+course” were to remove those unwanted banners from the SFV files again – mostly done by simply removing all comments from uploaded SFV files. During that
+process the information that a SFV file was created by WIN-SFV or SFV*NIX got lost. This again
+led to the problem that end-users had problems with WIN-SFV and SFV*NIX because those tools again refused to process these SFV files.<br>
+<br>
+After some heated discussions the author of WIN-SFV and SFV*NIX was contacted and asked to remove this
+limitation from his programs and said he would do so – but never did.&nbsp;<br>
+<br>
+For two months the situation remained unsolved – then pdSFV 1.0 was released. Intended as a quick &amp; dirty hack
+pdSFV’s primary target was to provide end-users with a tool flexible enough for all existing SFV file formats, even those which cannot be processed with WIN-SFV. Because several skilled
+programmers pointed out their interest in helping to contribute to a flexible SFV utility and their only problem was lacking knowledge of the used
+CRC/32 checksum algorithm, pdSFV was distributed with its full source to encourage the others to work on the
+details. <br>
+</p>
+<p align="left">Meanwhile, about a year later, we've decided to release pdSFV
+v1.2 to the public, having implemented several often-heard user requests and
+hoping that v1.2 will be as useful to you as v1.0 was.</p>
+
+</body>
+
+</html>

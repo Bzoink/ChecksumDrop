@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Using the command line tools&nbsp;&nbsp; pdSFV 1</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">Using the command line tools</font></b></p>
+<p><br>
+pdSFV 1.2 comes with three command line tools which can be used from Windows’ MS-DOS boxes. If you want
+to write batch files or simply prefer textmode applications over graphical user interfaces, here’s your toy. Copy them
+to somewhere in your PATH so you can run them without having to type the full pathname
+all the time.<br>
+<br>
+With sfvmake.exe you can create SFV files, with filecheck.exe you are able to check individual files and finally
+sfvcheck.exe lets you perform a check on a whole SFV file. For batch files: the check tools will exit with errorlevel 1
+if there was at least one bad file found, if all files were good it will be errorlevel 0.&nbsp;</p>
+<p><br>
+Using sfvmake.exe is simple. It takes two parameters, the first one being the name of the SFV file to be created and
+the second one a filemask. All files matching the filemask will be added into the SFV file. As example:<br>
+<br>
+<i>sfvmake mysounds.sfv *.mp3<br>
+</i><br>
+will create a new file “mysounds.sfv” and add all MP3 files in the current directory to it.<br>
+<br>
+Filecheck.exe takes a single parameter which is the filemask of the files to be checked. If you specify a filename,
+only this one file will be checked, but you can use wildcards as well (that’s new in v1.2, in v1.0 you only could
+check a single file). For example:<br>
+<br>
+<i>filecheck dummy1.r08<br>
+filecheck *.mp3<br>
+</i><br>
+Please note that you do not have to specify which SFV file to use. It will be found automatically.<br>
+<br>
+</p>
+<p>Finally, <i> sfvcheck.exe</i> takes the name of a SFV file as parameter and will perform a CRC check on all files listed in
+there. For example:<br>
+<br>
+<i>sfvcheck CD1\*.sfv<br>
+</i><br>
+Yes, you can use wildcards here as well. This is useful for batch processing, for example if you want to realize
+recursive SFV checking.<br>
+<br>
+Batch example: this simple batch file will perform a recursive check of all SFV files you have in any subdirectories on
+your C:\ drive and store the results in c:\mymp3s.txt:<br>
+<br>
+<font face="Courier New" size="2">echo “List of my MP3 files…” > c:\mymp3s.txt<br>
+for /d /r %%f in (*) do sfvcheck.exe %%f\*.sfv >> c:\mymp3s.txt<br>
+</font><br>
+Hint: check out the documentation of batch command “for” if you are interested in using its full power for
+such operations.<br>
+</p>
+
+</body>
+
+</html>

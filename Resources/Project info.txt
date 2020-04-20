@@ -1,0 +1,28 @@
+# DropHash
+
+Create and validate files through a hashing algorithm with a simple drag and drop interface.
+
+## User interface
+
+### Main drop area
+
+Big rectangular area with a icon indicating that user should drop files there. 
+
+Text: "Drop files here to create xxx hash" where xxx is the type of hash selected in the settings.
+
+Settings icon displays a dialog where the user can select the settings of the application.
+
+### Settings
+
+Choice of hashing algorithm (sha1, md5, crc32 and possible others in the future).
+
+## Resources
+
+Fabric Icons
+https://uifabricicons.azurewebsites.net
+
+Microsoft design:
+https://developer.microsoft.com/en-us/fabric#/styles/web/colors/neutrals
+
+
+

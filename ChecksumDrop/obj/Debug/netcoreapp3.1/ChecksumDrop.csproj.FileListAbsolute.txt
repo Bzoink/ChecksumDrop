@@ -1,0 +1,135 @@
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csprojAssemblyReference.cache
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.g.cs
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.cache
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.lref
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.exe
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll.config
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.deps.json
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.json
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.dev.json
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SHA3.Net.dll
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.baml
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.g.resources
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.Properties.Resources.resources
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.GenerateResource.cache
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfoInputs.cache
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfo.cs
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.CopyComplete
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.g.cs
+C:\Users\hom\source\repos\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.baml
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.exe
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll.config
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.deps.json
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.json
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.dev.json
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.MsDelta.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.PatchApi.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Mdb.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Pdb.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Rocks.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SHA3.Net.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Splat.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csprojAssemblyReference.cache
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.g.cs
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.g.cs
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.cache
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.lref
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.baml
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.baml
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.g.resources
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.Properties.Resources.resources
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.GenerateResource.cache
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfoInputs.cache
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfo.cs
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.CopyComplete
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Users\Tony Mattsson\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.exe
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll.config
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.deps.json
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.json
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.dev.json
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.MsDelta.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.PatchApi.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Mdb.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Pdb.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Rocks.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SHA3.Net.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Splat.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csprojAssemblyReference.cache
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.g.cs
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.g.cs
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.cache
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.lref
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.baml
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.baml
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.g.resources
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.Properties.Resources.resources
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.GenerateResource.cache
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfoInputs.cache
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfo.cs
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.CopyComplete
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Users\Tony\Documents\MEGA\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.exe
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll.config
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.deps.json
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.json
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.runtimeconfig.dev.json
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\ChecksumDrop.pdb
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.MsDelta.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.PatchApi.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\DeltaCompressionDotNet.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Mdb.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Pdb.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.Rocks.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SHA3.Net.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\SharpCompress.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\bin\Debug\netcoreapp3.1\Splat.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csprojAssemblyReference.cache
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.g.cs
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.g.cs
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.cache
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop_MarkupCompile.lref
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Results.baml
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\Settings.baml
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.g.resources
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.Properties.Resources.resources
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.GenerateResource.cache
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfoInputs.cache
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.AssemblyInfo.cs
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.csproj.CopyComplete
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.dll
+C:\Mega\Source\ChecksumDrop\ChecksumDrop\obj\Debug\netcoreapp3.1\ChecksumDrop.pdb

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Developer and Siteop Notes</title>
+</head>
+
+<body>
+
+<p align="center"><b><font size="6">Developer and Siteop Notes</font></b></p>
+<p><br>
+<br>
+Many sites, especially those considering themselves involved in what they call “scene”, try to implement more and
+more features into their system, to make their own site look more fancy in order to be “special” by creating a certain
+kind of “atmosphere” users find unique. Even smaller sites nowadays have “sitebots” which
+announce new uploads to one or more IRC channels their users are in.&nbsp;<br>
+<br>
+Most sites require that the SFV file of an ISO/VCD/MP3 release is uploaded as first file. This brings the advantage
+of being able to SFV-check all other files immediately after their upload, only giving “credits” for your upload if the file passes the SFV check.&nbsp;<br>
+<br>
+Some people tried to make their sitebot announces more fancy (themselves they call this “more elite”) by letting the
+bot say the size of a release when the SFV file gets uploaded. If the files’ sizes are listed in the SFV file this is an
+easy job even if those files are not uploaded yet: simply add all filesizes and the sum is the size of
+the release.&nbsp;<br>
+<br>
+When some other sites tried to make themselves even “more elite” by adding their sitelogo as comment to uploaded SFV
+files, other sites again took countermeasures against this by simply stripping all comments out of uploaded SFV files
+to get rid of other sites’ banners. You can guess by now that because of this the files’ size
+and date stamps got lost most of the time to the disadvantage of those sites which tried to gather information about a release’s size after the
+SFV upload.<br>
+<br>
+Unfortunately, there is no standard solution to this self-made problem. Filesize stamps aren’t added to SFV files by
+default from all available SFV tools and the probability that some other site strips out all comments from the SFV
+before it hits your place is somewhat high. Our recommendation is to use a guessing system
+based on the “standard file size” (currently 15.000.000 bytes) for ISO/VCD releases and the number of files (which can easily be extracted
+by counting non-comment lines of any SFV file) in case filesize stamps are not available in the SFV file. Good luck :)<br>
+</p>
+
+</body>
+
+</html>
