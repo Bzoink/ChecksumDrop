@@ -52,6 +52,9 @@ TestResults/
 # Publish output
 publish/
 
+# Installer
+installer/
+
 # Others
 _ReSharper*/
 *.vs/
