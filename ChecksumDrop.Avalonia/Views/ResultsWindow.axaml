@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ChecksumDrop.Avalonia.ViewModels"
+        xmlns:dgrid="using:Avalonia.Controls"
+        x:Class="ChecksumDrop.Avalonia.Views.ResultsWindow"
+        x:DataType="vm:ResultsWindowViewModel"
+        Width="900"
+        Height="500"
+        Title="Results">
+  <StackPanel Margin="20" Spacing="10">
+    <TextBlock Text="Results" FontSize="28" FontWeight="SemiBold" />
+    <TextBlock Text="{Binding TotalResults}" FontSize="20" />
+
+    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto" ColumnSpacing="12" RowSpacing="8">
+      <TextBlock Text="Total files" />
+      <TextBlock Grid.Column="1" Text="{Binding TotalFiles}" />
+      <TextBlock Grid.Row="1" Text="Not found" />
+      <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NotFound}" />
+      <TextBlock Grid.Row="2" Text="Not valid" />
+      <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding NotValid}" />
+    </Grid>
+
+    <dgrid:DataGrid ItemsSource="{Binding Items}"
+                    AutoGenerateColumns="False"
+                    IsReadOnly="True"
+                    Height="320">
+      <dgrid:DataGrid.Columns>
+        <dgrid:DataGridTextColumn Header="Filename" Binding="{Binding Filename}" Width="3*" />
+        <dgrid:DataGridTextColumn Header="Method" Binding="{Binding Method}" Width="*" />
+        <dgrid:DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*" />
+      </dgrid:DataGrid.Columns>
+    </dgrid:DataGrid>
+
+    <Button Content="Close" HorizontalAlignment="Right" Click="CloseButton_OnClick" />
+  </StackPanel>
+</Window>

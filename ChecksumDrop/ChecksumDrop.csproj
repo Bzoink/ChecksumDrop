@@ -2,22 +2,28 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>ChecksumDrop.ico</ApplicationIcon>
+    <ApplicationIcon>ChecksumDrop_64.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ChecksumDrop.png" />
+    <None Remove="ChecksumDrop.svg" />
     <None Remove="Resources\fabric-icons-6c64f64d.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SHA3.Net" Version="1.2.2" />
-    <PackageReference Include="Squirrel.Windows" Version="1.9.1" />
-    <PackageReference Include="System.ComponentModel.EventBasedAsync" Version="4.3.0" />
+    <Content Include="ChecksumDrop_64.ico" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SHA3.Net" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ChecksumDrop.png" />
+    <Resource Include="ChecksumDrop.svg" />
     <Resource Include="Resources\fabric-icons-6c64f64d.ttf" />
   </ItemGroup>
 
@@ -45,6 +51,9 @@
     <None Update="Properties\User.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>User.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Resources\ChecksumDrop.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

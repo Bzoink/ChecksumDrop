@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:ChecksumDrop.Avalonia.ViewModels"
+        x:Class="ChecksumDrop.Avalonia.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Width="640"
+        Height="640"
+        MinWidth="640"
+        MinHeight="640"
+        Title="ChecksumDrop"
+        Background="#10161F"
+        mc:Ignorable="d">
+
+  <Grid RowDefinitions="*,Auto,Auto" Margin="24">
+    <Border x:Name="DropZone"
+            Grid.Row="0"
+            BorderBrush="#3A4758"
+            BorderThickness="2"
+            CornerRadius="16"
+            Background="#17212B">
+      <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" Margin="24">
+        <StackPanel Spacing="12" HorizontalAlignment="Center" VerticalAlignment="Top">
+          <TextBlock Text="{Binding MainText}" FontSize="32" FontWeight="SemiBold" Foreground="White" TextAlignment="Center" />
+          <TextBlock Text="{Binding SubMainText}" FontSize="28" Foreground="White" TextAlignment="Center" />
+          <TextBlock Text="{Binding SubSubMainText}" FontSize="24" Foreground="#D8DEE9" TextAlignment="Center" TextWrapping="Wrap" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="3"
+                   Text="Drop files or folders anywhere in this panel"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="20"
+                   Foreground="#8FA1B3" />
+
+        <StackPanel Grid.Row="4" Orientation="Vertical" Spacing="12">
+          <TextBlock Text="{Binding StatusText}" HorizontalAlignment="Center" TextAlignment="Center" Foreground="White" />
+          <ProgressBar Minimum="0" Maximum="100" Value="{Binding ProgressValue}" IsVisible="{Binding IsBusy}" Height="12" />
+        </StackPanel>
+      </Grid>
+    </Border>
+
+   <Grid Grid.Row="1" ColumnDefinitions="*,Auto,Auto,Auto" Margin="0,16,0,0">
+      <StackPanel Orientation="Horizontal" Spacing="12">
+        <TextBlock Text="Method" VerticalAlignment="Center" Foreground="White" />
+        <ComboBox Width="160" ItemsSource="{Binding Methods}" SelectedItem="{Binding SelectedMethod}" />
+      </StackPanel>
+
+      <Button Grid.Column="1" Content="Choose Files" Click="ChooseFilesButton_OnClick" Margin="12,0,0,0" />
+      <Button Grid.Column="2" Content="Choose Folder" Click="ChooseFolderButton_OnClick" Margin="12,0,0,0" />
+      <Button Grid.Column="3" Content="Settings" Click="SettingsButton_OnClick" Margin="12,0,0,0" />
+    </Grid>
+
+    <Button Grid.Row="2"
+            Content="Cancel"
+            Command="{Binding CancelCommand}"
+            HorizontalAlignment="Right"
+            Margin="0,16,0,0"
+            IsVisible="{Binding IsBusy}" />
+  </Grid>
+</Window>

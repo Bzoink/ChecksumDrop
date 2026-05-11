@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ChecksumDrop.Avalonia.ViewModels"
+        x:Class="ChecksumDrop.Avalonia.Views.SettingsWindow"
+        x:DataType="vm:SettingsWindowViewModel"
+        Width="480"
+        Height="260"
+        CanResize="False"
+        ShowInTaskbar="False"
+        Title="Settings">
+  <Grid RowDefinitions="Auto,*,Auto,Auto" Margin="24">
+    <TextBlock Text="Hash method" FontSize="28" FontWeight="SemiBold" />
+
+    <ComboBox Grid.Row="1"
+              Margin="0,16,0,0"
+              ItemsSource="{Binding Methods}"
+              SelectedItem="{Binding SelectedMethod}"
+              HorizontalAlignment="Left"
+              Width="220" />
+
+    <TextBlock Grid.Row="2" Text="{Binding AboutLine1}" HorizontalAlignment="Center" Margin="0,24,0,0" />
+    <StackPanel Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,8,0,0">
+      <TextBlock Text="{Binding AboutLine2}" HorizontalAlignment="Center" />
+      <Button Content="Close" HorizontalAlignment="Center" Margin="0,12,0,0" Click="CloseButton_OnClick" />
+    </StackPanel>
+  </Grid>
+</Window>

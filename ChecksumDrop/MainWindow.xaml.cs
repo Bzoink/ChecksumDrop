@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Interop;
 
 namespace ChecksumDrop
 {
@@ -16,6 +18,15 @@ namespace ChecksumDrop
     public partial class MainWindow : Window
     {
         BackgroundWorker worker;
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+
+        [DllImport("user32.dll")]
+        private static extern bool EnableMenuItem(IntPtr hMenu, uint uIDEnableItem, uint uEnable);
+        
+        private const uint SC_CLOSE = 0xF060;
+        private const uint MF_GRAYED = 0x00000001;
+        private const uint MF_ENABLED = 0x00000000;
 
         public MainWindow()
         {
@@ -24,7 +35,9 @@ namespace ChecksumDrop
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            MainLabel.Content = string.Format("Cancelling {0}", Hyphenator.Translate(FileList.Method));
+            MainLabel.Content = string.Empty;
+            SubMainLabel.Content = string.Empty;
+            SubSubMainLabel.Content = string.Format("Cancelling {0}", Hyphenator.Translate(FileList.Method));
             StatusText.Content = "Waiting for file handle ...";
             worker.CancelAsync();
         }
@@ -33,14 +46,24 @@ namespace ChecksumDrop
         {
             if (SettingsWindow.Handle == null)
             {
+                IntPtr hSystemMenu = GetSystemMenu(new WindowInteropHelper(this).Handle, false);
+                EnableMenuItem(hSystemMenu, SC_CLOSE, MF_GRAYED);
 
                 SettingsWindow.Handle = new Settings();
-                SettingsWindow.Handle.Closing += (s, e) => SettingsWindow.Handle = null;
+                SettingsWindow.Handle.Topmost = true;
+                SettingsWindow.Handle.Closing += (s, e) =>
+                {
+                    SettingsWindow.Handle = null;
+                    EnableMenuItem(hSystemMenu, SC_CLOSE, MF_ENABLED);
+                };
+
+                SettingsWindow.Handle.Left = this.Left + (this.Width - SettingsWindow.Handle.Width) / 2;
+                SettingsWindow.Handle.Top = this.Top + (this.Height - SettingsWindow.Handle.Height) / 2;
                 SettingsWindow.Handle.Show();
             }
             else
             {
-                SettingsWindow.Handle.Focus();
+                SettingsWindow.Handle.Close();
             }
         }
 
@@ -59,7 +82,9 @@ namespace ChecksumDrop
             int done = 0;
             bool allFilesAreDigest = true;
 
-            MainLabel.Content = string.Format("Creating {0}", Hyphenator.Translate(FileList.Method));
+            MainLabel.Content = string.Empty;
+            SubMainLabel.Content = string.Empty;
+            SubSubMainLabel.Content = string.Format("Creating {0}", Hyphenator.Translate(FileList.Method));
             StatusText.Content = string.Empty;
 
             for (var i = 0; i < instance.Length; i++)
@@ -132,7 +157,9 @@ namespace ChecksumDrop
                     totalNumberOfItems = ReadAllLines.CountLines(currentFile);
                     this.Dispatcher.Invoke(() =>
                     {
-                        MainLabel.Content = string.Format("Checking {0} hash", Hyphenator.Translate(FileList.Method));
+                        MainLabel.Content = string.Empty;
+                        SubMainLabel.Content = string.Empty;
+                        SubSubMainLabel.Content = string.Format("Checking {0} hash", Hyphenator.Translate(FileList.Method));
                         StatusText.Content = string.Format("Analyzing files in {0}", Path.GetFileName(currentFile));
                     });
 
@@ -204,7 +231,9 @@ namespace ChecksumDrop
                 {
                     this.Dispatcher.Invoke(() =>
                     {
-                        MainLabel.Content = "Drop files and folders here!";
+                        MainLabel.Content = "Drop files or folders here";
+                        SubMainLabel.Content = "to create a checksum file";
+                        SubSubMainLabel.Content = "Drop digest file to verify";
                         StatusText.Content = string.Empty;
                     });
                 }
@@ -212,7 +241,9 @@ namespace ChecksumDrop
                 {
                     this.Dispatcher.Invoke(() =>
                     {
-                        MainLabel.Content = "Done validation";
+                        MainLabel.Content = string.Empty;
+                        SubMainLabel.Content = string.Empty;
+                        SubSubMainLabel.Content = "Done validation!";
                         StatusText.Content = string.Empty;
                     });
                     int totalFiles = FileList.FileHash.Count();
@@ -254,7 +285,10 @@ namespace ChecksumDrop
 
                 if (e.Cancelled)
                 {
-                    MainLabel.Content = "Drop files and folders here!";
+                    MainLabel.Content = "Drop files or folders here";
+                    SubMainLabel.Content = "to create a checksum file";
+                    SubSubMainLabel.Content = "Drop digest file to verify";
+
                     StatusText.Content = string.Empty;
                 }
                 else
@@ -267,12 +301,16 @@ namespace ChecksumDrop
                         TextWriter textWriter = new StreamWriter(filename);
                         textWriter.Write(TextOutput.Generate());
                         textWriter.Close();
-                        MainLabel.Content = "Wrote checksum file";
+                        MainLabel.Content = string.Empty;
+                        SubMainLabel.Content = string.Empty;
+                        SubSubMainLabel.Content = "Wrote checksum file";
                         StatusText.Content = string.Format("{0} of {1} files using {2}", baseFilename, fileCollection.Count, Hyphenator.Translate(FileList.Method));
                     }
                     catch (Exception)
                     {
-                        MainLabel.Content = "Error";
+                        MainLabel.Content = string.Empty;
+                        SubMainLabel.Content = string.Empty;
+                        SubSubMainLabel.Content = "Error";
                         StatusText.Content = string.Format("Could not save {0}", baseFilename);
                     }
                 }

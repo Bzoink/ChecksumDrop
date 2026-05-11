@@ -121,7 +121,7 @@
     <value>Tony Mattsson</value>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>Intensive solutions</value>
+    <value>u-x.cc</value>
   </data>
   <data name="MajorVersion" xml:space="preserve">
     <value>1</value>
@@ -130,12 +130,12 @@
     <value>MD5</value>
   </data>
   <data name="MinorVersion" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="ProgramName" xml:space="preserve">
     <value>ChecksumDrop</value>
   </data>
   <data name="PublicationYear" xml:space="preserve">
-    <value>2020</value>
+    <value>2024</value>
   </data>
 </root>

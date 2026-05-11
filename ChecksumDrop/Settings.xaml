@@ -7,48 +7,18 @@
         mc:Ignorable="d"
         Title="Settings" Height="248" Width="500" FontSize="12" ResizeMode="NoResize" ShowInTaskbar="False" ScrollViewer.HorizontalScrollBarVisibility="Auto">
     <Window.Resources>
-        <Style TargetType="{x:Type RadioButton}" >
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type RadioButton}">
-                        <BulletDecorator Background="White" Cursor="Hand">
-                            <BulletDecorator.Bullet>
-                                <Grid Height="24" Width="24">
-                                    <!--Define size of the Bullet-->
-                                    <!--The two borders-->
-                                    <Border Name="RadioOuter" Background="Transparent" BorderBrush="Gainsboro" BorderThickness="2" CornerRadius="2" />
-                                    <Border CornerRadius="0" Margin="4" Name="RadioMark" Background="#FFADADAD" Visibility="Hidden" />
-                                </Grid>
-                            </BulletDecorator.Bullet>
-                            <!--Text element-->
-                            <TextBlock Margin="3,1,0,0" Foreground="#FF3E3E3E" FontFamily="Calibri" FontSize="18">
-                        <ContentPresenter />
-                            </TextBlock>
-                        </BulletDecorator>
-                        <!--If item is checked, trigger the visibility of the mark-->
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsChecked" Value="true">
-                                <!--If item is checked, trigger the visibility of the mark and change the color of the selected bullet into a darker gray for better highlighting-->
-                                <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
-                                <Setter TargetName="RadioOuter" Property="BorderBrush" Value="#FFADADAD" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+     </Window.Resources>
     <Grid Width="500" Height="247">
         <Label Content="Hash method" FontSize="24" HorizontalAlignment="Left" Height="37" Margin="42,11,0,0" VerticalAlignment="Top" Width="204" Padding="0,5,5,5" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="CRC32" Content="CRC32" FontSize="18" HorizontalAlignment="Left" Margin="42,53,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="MD5" Content="MD5" FontSize="18" HorizontalAlignment="Left" Margin="42,82,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA1" Content="SHA1" FontSize="18" HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Center" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA256" Content="SHA256" FontSize="18" HorizontalAlignment="Left" Margin="188,53,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA384" Content="SHA384" FontSize="18" HorizontalAlignment="Left" Margin="188,82,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA512" Content="SHA512" FontSize="18" HorizontalAlignment="Left" Margin="188,0,0,0" VerticalAlignment="Center" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA3256" Content="SHA3-256" FontSize="18" HorizontalAlignment="Left" Margin="334,53,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA3384" Content="SHA3-384" FontSize="18" HorizontalAlignment="Left" Margin="334,82,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
-        <RadioButton x:Name="SHA3512" Content="SHA3-512" FontSize="18" HorizontalAlignment="Left" Margin="334,0,0,0" VerticalAlignment="Center" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" />
+        <RadioButton x:Name="CRC32" Content="CRC32" FontSize="18" HorizontalAlignment="Left" Margin="42,53,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="MD5" Content="MD5" FontSize="18" HorizontalAlignment="Left" Margin="42,82,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA1" Content="SHA1" FontSize="18" HorizontalAlignment="Left" Margin="42,0,0,0" VerticalAlignment="Center" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA256" Content="SHA256" FontSize="18" HorizontalAlignment="Left" Margin="188,53,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA384" Content="SHA384" FontSize="18" HorizontalAlignment="Left" Margin="188,82,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA512" Content="SHA512" FontSize="18" HorizontalAlignment="Left" Margin="188,0,0,0" VerticalAlignment="Center" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA3256" Content="SHA3-256" FontSize="18" HorizontalAlignment="Left" Margin="334,53,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA3384" Content="SHA3-384" FontSize="18" HorizontalAlignment="Left" Margin="334,82,0,0" VerticalAlignment="Top" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
+        <RadioButton x:Name="SHA3512" Content="SHA3-512" FontSize="18" HorizontalAlignment="Left" Margin="334,0,0,0" VerticalAlignment="Center" Checked="method_Checked" GroupName="Method" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" />
         <Label x:Name="About1" Content="" HorizontalAlignment="Center" Margin="0,149,0,0" VerticalAlignment="Top" Width="416"/>
         <Label x:Name="About2" Content="" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" Width="416"/>
     </Grid>
