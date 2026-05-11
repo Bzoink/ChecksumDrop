@@ -1,0 +1,29 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+**/[Bb]in/
+**/[Oo]bj/
+**/publish/
+**/artifacts/
+
+# Test output
+TestResults/
+*.trx
+
+# NuGet/package cache artifacts
+packages/
+*.nupkg
+*.snupkg
+
+# Logs
+*.log
+Log.txt
+
+# OS files
+.DS_Store
+Thumbs.db
