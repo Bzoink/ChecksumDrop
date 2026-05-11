@@ -1,0 +1,60 @@
+.gitignore
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored if you use PackageReference
+packages/
+# Uncomment if you have legacy package config
+#packages.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# OS generated files
+.DS_Store
+*.swp
+
+# Rider project files
+.idea/
+
+# Local test results
+TestResults/
+*.VisualState.xml
+*.cache
+*.diff
+*.orig
+*.rej
+*.sdf
+*.dbmdl
+
+# WPF specific
+*.gpState
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# Publish output
+publish/
+
+# Installer
+installer/
+
+# Others
+_ReSharper*/
+*.vs/
