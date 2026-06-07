@@ -27,3 +27,13 @@ Log.txt
 # OS files
 .DS_Store
 Thumbs.db
+
+# CMake / Native Build
+[Bb]uild/
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json
+cmake-build-*/
+.ipch/
+*.sublime-project
+*.sublime-workspace

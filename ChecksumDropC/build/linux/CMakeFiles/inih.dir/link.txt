@@ -1,2 +1,0 @@
-/usr/bin/ar qc libinih.a CMakeFiles/inih.dir/lib/inih/ini.c.o
-/usr/bin/ranlib libinih.a
