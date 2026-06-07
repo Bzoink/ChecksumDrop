@@ -57,18 +57,14 @@ public partial class MainWindowViewModel : ViewModelBase
     }
 
     [RelayCommand]
-    private async Task OpenSettingsAsync(Window owner)
+    private async Task OpenAboutAsync(Window owner)
     {
-        var window = new SettingsWindow
+        var window = new AboutWindow
         {
-            DataContext = new SettingsWindowViewModel(SelectedMethod)
+            DataContext = new AboutWindowViewModel()
         };
 
-        var result = await window.ShowDialog<ChecksumMethod?>(owner);
-        if (result.HasValue)
-        {
-            SelectedMethod = result.Value;
-        }
+        await window.ShowDialog(owner);
     }
 
     [RelayCommand]

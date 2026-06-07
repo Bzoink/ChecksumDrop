@@ -31,11 +31,11 @@ public partial class MainWindow : Window
         }
     }
 
-    private async void SettingsButton_OnClick(object? sender, global::Avalonia.Interactivity.RoutedEventArgs e)
+    private async void AboutButton_OnClick(object? sender, global::Avalonia.Interactivity.RoutedEventArgs e)
     {
         if (DataContext is MainWindowViewModel viewModel)
         {
-            await viewModel.OpenSettingsCommand.ExecuteAsync(this);
+            await viewModel.OpenAboutCommand.ExecuteAsync(this);
         }
     }
 

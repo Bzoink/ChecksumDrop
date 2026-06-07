@@ -1,27 +1,20 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:ChecksumDrop.Avalonia.ViewModels"
-        x:Class="ChecksumDrop.Avalonia.Views.SettingsWindow"
-        x:DataType="vm:SettingsWindowViewModel"
-        Width="480"
-        Height="260"
+        x:Class="ChecksumDrop.Avalonia.Views.AboutWindow"
+        x:DataType="vm:AboutWindowViewModel"
+        Width="360"
+        Height="180"
         CanResize="False"
         ShowInTaskbar="False"
-        Title="Settings">
-  <Grid RowDefinitions="Auto,*,Auto,Auto" Margin="24">
-    <TextBlock Text="Hash method" FontSize="28" FontWeight="SemiBold" />
-
-    <ComboBox Grid.Row="1"
-              Margin="0,16,0,0"
-              ItemsSource="{Binding Methods}"
-              SelectedItem="{Binding SelectedMethod}"
-              HorizontalAlignment="Left"
-              Width="220" />
-
-    <TextBlock Grid.Row="2" Text="{Binding AboutLine1}" HorizontalAlignment="Center" Margin="0,24,0,0" />
-    <StackPanel Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,8,0,0">
-      <TextBlock Text="{Binding AboutLine2}" HorizontalAlignment="Center" />
-      <Button Content="Close" HorizontalAlignment="Center" Margin="0,12,0,0" Click="CloseButton_OnClick" />
+        WindowStartupLocation="CenterOwner"
+        Title="About ChecksumDrop">
+  <Grid RowDefinitions="*,Auto" Margin="24">
+    <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="8">
+      <TextBlock Text="{Binding AboutLine1}" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Center" />
+      <TextBlock Text="{Binding AboutLine2}" FontSize="12" Foreground="Gray" HorizontalAlignment="Center" />
     </StackPanel>
+
+    <Button Grid.Row="1" Content="Close" HorizontalAlignment="Center" Margin="0,16,0,0" Click="CloseButton_OnClick" />
   </Grid>
 </Window>

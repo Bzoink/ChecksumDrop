@@ -10,5 +10,8 @@ public enum ChecksumMethod
     SHA512,
     SHA3256,
     SHA3384,
-    SHA3512
+    SHA3512,
+    BLAKE3,
+    XXHASH64,
+    XXHASH3
 }

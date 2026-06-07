@@ -2,6 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:ChecksumDrop.Avalonia.ViewModels"
+        xmlns:converters="using:ChecksumDrop.Avalonia.Converters"
         x:Class="ChecksumDrop.Avalonia.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Width="640"
@@ -11,6 +12,10 @@
         Title="ChecksumDrop"
         Background="#10161F"
         mc:Ignorable="d">
+
+  <Window.Resources>
+    <converters:EnumDisplayNameConverter x:Key="EnumDisplayNameConverter" />
+  </Window.Resources>
 
   <Grid RowDefinitions="*,Auto,Auto" Margin="24">
     <Border x:Name="DropZone"
@@ -43,12 +48,18 @@
    <Grid Grid.Row="1" ColumnDefinitions="*,Auto,Auto,Auto" Margin="0,16,0,0">
       <StackPanel Orientation="Horizontal" Spacing="12">
         <TextBlock Text="Method" VerticalAlignment="Center" Foreground="White" />
-        <ComboBox Width="160" ItemsSource="{Binding Methods}" SelectedItem="{Binding SelectedMethod}" />
+        <ComboBox Width="160" ItemsSource="{Binding Methods}" SelectedItem="{Binding SelectedMethod}">
+          <ComboBox.ItemTemplate>
+            <DataTemplate>
+              <TextBlock Text="{Binding Converter={StaticResource EnumDisplayNameConverter}}" />
+            </DataTemplate>
+          </ComboBox.ItemTemplate>
+        </ComboBox>
       </StackPanel>
 
       <Button Grid.Column="1" Content="Choose Files" Click="ChooseFilesButton_OnClick" Margin="12,0,0,0" />
       <Button Grid.Column="2" Content="Choose Folder" Click="ChooseFolderButton_OnClick" Margin="12,0,0,0" />
-      <Button Grid.Column="3" Content="Settings" Click="SettingsButton_OnClick" Margin="12,0,0,0" />
+      <Button Grid.Column="3" Content="About" Click="AboutButton_OnClick" Margin="12,0,0,0" />
     </Grid>
 
     <Button Grid.Row="2"

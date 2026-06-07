@@ -19,6 +19,9 @@ public sealed class HashingService
             ChecksumMethod.SHA3256 => ComputeSha3(filename, Sha3.Sha3256),
             ChecksumMethod.SHA3384 => ComputeSha3(filename, Sha3.Sha3384),
             ChecksumMethod.SHA3512 => ComputeSha3(filename, Sha3.Sha3512),
+            ChecksumMethod.BLAKE3 => ComputeBlake3(filename),
+            ChecksumMethod.XXHASH64 => ComputeXxHash64(filename),
+            ChecksumMethod.XXHASH3 => ComputeXxHash3(filename),
             _ => throw new ArgumentOutOfRangeException(nameof(method), method, null)
         };
     }
@@ -49,6 +52,49 @@ public sealed class HashingService
         }
 
         return stream.ReadCrc.ToString("X8");
+    }
+
+    private static string ComputeBlake3(string filename)
+    {
+        using var hasher = Blake3.Hasher.New();
+        using var stream = File.OpenRead(filename);
+        var buffer = new byte[16384];
+        int bytesRead;
+        while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+        {
+            hasher.Update(new ReadOnlySpan<byte>(buffer, 0, bytesRead));
+        }
+        var hashBytes = new byte[32];
+        hasher.Finalize(hashBytes);
+        return ToHex(hashBytes);
+    }
+
+    private static string ComputeXxHash64(string filename)
+    {
+        var xxh = new System.IO.Hashing.XxHash64();
+        using var stream = File.OpenRead(filename);
+        var buffer = new byte[16384];
+        int bytesRead;
+        while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+        {
+            xxh.Append(new ReadOnlySpan<byte>(buffer, 0, bytesRead));
+        }
+        var hashBytes = xxh.GetCurrentHash();
+        return ToHex(hashBytes);
+    }
+
+    private static string ComputeXxHash3(string filename)
+    {
+        var xxh = new System.IO.Hashing.XxHash3();
+        using var stream = File.OpenRead(filename);
+        var buffer = new byte[16384];
+        int bytesRead;
+        while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) > 0)
+        {
+            xxh.Append(new ReadOnlySpan<byte>(buffer, 0, bytesRead));
+        }
+        var hashBytes = xxh.GetCurrentHash();
+        return ToHex(hashBytes);
     }
 
     private static string ToHex(byte[] hash) => BitConverter.ToString(hash).Replace("-", string.Empty).ToUpperInvariant();

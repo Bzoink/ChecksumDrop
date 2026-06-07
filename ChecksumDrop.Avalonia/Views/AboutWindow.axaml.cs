@@ -3,22 +3,15 @@ using ChecksumDrop.Avalonia.ViewModels;
 
 namespace ChecksumDrop.Avalonia.Views;
 
-public partial class SettingsWindow : Window
+public partial class AboutWindow : Window
 {
-    public SettingsWindow()
+    public AboutWindow()
     {
         InitializeComponent();
     }
 
     private void CloseButton_OnClick(object? sender, global::Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (DataContext is SettingsWindowViewModel viewModel)
-        {
-            Close(viewModel.SelectedMethod);
-        }
-        else
-        {
-            Close();
-        }
+        Close();
     }
 }
