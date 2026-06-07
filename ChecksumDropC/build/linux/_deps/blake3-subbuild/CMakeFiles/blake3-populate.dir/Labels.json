@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/CMakeFiles/blake3-populate"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/CMakeFiles/blake3-populate.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/CMakeFiles/blake3-populate-complete.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-build.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-configure.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-download.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-install.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-patch.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-test.rule"
+		},
+		{
+			"file" : "/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/blake3-populate-prefix/src/blake3-populate-stamp/blake3-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"blake3-populate"
+		],
+		"name" : "blake3-populate"
+	}
+}

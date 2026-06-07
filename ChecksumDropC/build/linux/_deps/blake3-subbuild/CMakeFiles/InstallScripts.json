@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

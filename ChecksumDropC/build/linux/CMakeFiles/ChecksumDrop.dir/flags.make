@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
 
-C_INCLUDES = -I/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-src/src/external/glfw/include -I/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-src/src -I/home/tony/Code/ChecksumDrop/ChecksumDropC/lib/raygui -I/home/tony/Code/ChecksumDrop/ChecksumDropC/lib/inih
+C_INCLUDES = -I/home/tony/Code/ChecksumDrop/ChecksumDropC/src -I/home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash -I/home/tony/Code/ChecksumDrop/ChecksumDropC/lib/xxhash -I/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-src/src/external/glfw/include -I/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-src/src -I/home/tony/Code/ChecksumDrop/ChecksumDropC/lib/raygui -I/home/tony/Code/ChecksumDrop/ChecksumDropC/lib/inih -I/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-src/c
 
 C_FLAGS = -g -std=gnu11
 

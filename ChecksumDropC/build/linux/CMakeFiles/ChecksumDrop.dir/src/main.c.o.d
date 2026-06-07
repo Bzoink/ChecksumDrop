@@ -42,4 +42,6 @@ CMakeFiles/ChecksumDrop.dir/src/main.c.o: \
  /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h \
- /home/tony/Code/ChecksumDrop/ChecksumDropC/src/x11_dnd.h
+ /home/tony/Code/ChecksumDrop/ChecksumDropC/src/x11_dnd.h \
+ /home/tony/Code/ChecksumDrop/ChecksumDropC/src/hashing.h \
+ /home/tony/Code/ChecksumDrop/ChecksumDropC/src/checksum_method.h

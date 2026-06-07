@@ -36,9 +36,25 @@ target_include_directories(inih PUBLIC
     "${CMAKE_CURRENT_SOURCE_DIR}/lib/inih"
 )
 
+# ── BLAKE3 — official C library, fetched ──────────────────────────────────────
+FetchContent_Declare(blake3
+    GIT_REPOSITORY https://github.com/BLAKE3-team/BLAKE3.git
+    GIT_TAG        1.5.4
+    GIT_SHALLOW    TRUE
+    SOURCE_SUBDIR  c
+)
+FetchContent_MakeAvailable(blake3)
+
 # ── ChecksumDrop executable ───────────────────────────────────────────────────
 set(SOURCES
     src/main.c
+    src/checksum_method.c
+    src/crc32.c
+    src/hashing.c
+    lib/hash/md5.c
+    lib/hash/sha1.c
+    lib/hash/sha2.c
+    lib/hash/sha3.c
 )
 
 # Embed the application icon into the Windows PE executable.
@@ -58,6 +74,12 @@ endif()
 
 add_executable(ChecksumDrop ${SOURCES})
 
+target_include_directories(ChecksumDrop PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/src"
+    "${CMAKE_CURRENT_SOURCE_DIR}/lib/hash"
+    "${CMAKE_CURRENT_SOURCE_DIR}/lib/xxhash"
+)
+
 if(WIN32)
     # Use the Windows GUI subsystem — suppresses the console window.
     set_target_properties(ChecksumDrop PROPERTIES WIN32_EXECUTABLE TRUE)
@@ -67,6 +89,7 @@ target_link_libraries(ChecksumDrop PRIVATE
     raylib
     raygui
     inih
+    blake3
 )
 
 if(WIN32)

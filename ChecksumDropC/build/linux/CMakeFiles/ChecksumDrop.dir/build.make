@@ -86,10 +86,108 @@ CMakeFiles/ChecksumDrop.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/src/main.c -o CMakeFiles/ChecksumDrop.dir/src/main.c.s
 
+CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/src/checksum_method.c
+CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o -MF CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o.d -o CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/src/checksum_method.c
+
+CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/src/checksum_method.c > CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.i
+
+CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/src/checksum_method.c -o CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.s
+
+CMakeFiles/ChecksumDrop.dir/src/crc32.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/src/crc32.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/src/crc32.c
+CMakeFiles/ChecksumDrop.dir/src/crc32.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ChecksumDrop.dir/src/crc32.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/src/crc32.c.o -MF CMakeFiles/ChecksumDrop.dir/src/crc32.c.o.d -o CMakeFiles/ChecksumDrop.dir/src/crc32.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/src/crc32.c
+
+CMakeFiles/ChecksumDrop.dir/src/crc32.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/src/crc32.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/src/crc32.c > CMakeFiles/ChecksumDrop.dir/src/crc32.c.i
+
+CMakeFiles/ChecksumDrop.dir/src/crc32.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/src/crc32.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/src/crc32.c -o CMakeFiles/ChecksumDrop.dir/src/crc32.c.s
+
+CMakeFiles/ChecksumDrop.dir/src/hashing.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/src/hashing.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/src/hashing.c
+CMakeFiles/ChecksumDrop.dir/src/hashing.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ChecksumDrop.dir/src/hashing.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/src/hashing.c.o -MF CMakeFiles/ChecksumDrop.dir/src/hashing.c.o.d -o CMakeFiles/ChecksumDrop.dir/src/hashing.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/src/hashing.c
+
+CMakeFiles/ChecksumDrop.dir/src/hashing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/src/hashing.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/src/hashing.c > CMakeFiles/ChecksumDrop.dir/src/hashing.c.i
+
+CMakeFiles/ChecksumDrop.dir/src/hashing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/src/hashing.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/src/hashing.c -o CMakeFiles/ChecksumDrop.dir/src/hashing.c.s
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/md5.c
+CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o -MF CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o.d -o CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/md5.c
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/md5.c > CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.i
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/md5.c -o CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.s
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha1.c
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o -MF CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o.d -o CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha1.c
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha1.c > CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.i
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha1.c -o CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.s
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha2.c
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o -MF CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o.d -o CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha2.c
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha2.c > CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.i
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha2.c -o CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.s
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha3.c
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o -MF CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o.d -o CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha3.c
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha3.c > CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.i
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tony/Code/ChecksumDrop/ChecksumDropC/lib/hash/sha3.c -o CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.s
+
 CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o: CMakeFiles/ChecksumDrop.dir/flags.make
 CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o: /home/tony/Code/ChecksumDrop/ChecksumDropC/src/x11_dnd.c
 CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o -MF CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o.d -o CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o -c /home/tony/Code/ChecksumDrop/ChecksumDropC/src/x11_dnd.c
 
 CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.i: cmake_force
@@ -103,17 +201,32 @@ CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.s: cmake_force
 # Object files for target ChecksumDrop
 ChecksumDrop_OBJECTS = \
 "CMakeFiles/ChecksumDrop.dir/src/main.c.o" \
+"CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o" \
+"CMakeFiles/ChecksumDrop.dir/src/crc32.c.o" \
+"CMakeFiles/ChecksumDrop.dir/src/hashing.c.o" \
+"CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o" \
+"CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o" \
+"CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o" \
+"CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o" \
 "CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o"
 
 # External object files for target ChecksumDrop
 ChecksumDrop_EXTERNAL_OBJECTS =
 
 ChecksumDrop: CMakeFiles/ChecksumDrop.dir/src/main.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/src/crc32.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/src/hashing.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o
+ChecksumDrop: CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o
 ChecksumDrop: CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o
 ChecksumDrop: CMakeFiles/ChecksumDrop.dir/build.make
 ChecksumDrop: CMakeFiles/ChecksumDrop.dir/compiler_depend.ts
 ChecksumDrop: _deps/raylib-build/raylib/libraylib.a
 ChecksumDrop: libinih.a
+ChecksumDrop: _deps/blake3-build/libblake3.a
 ChecksumDrop: /usr/lib/libOpenGL.so
 ChecksumDrop: /usr/lib/libGLX.so
 ChecksumDrop: /usr/lib/libGLU.so
@@ -121,7 +234,7 @@ ChecksumDrop: _deps/raylib-build/raylib/external/glfw/src/libglfw3.a
 ChecksumDrop: /usr/lib/librt.a
 ChecksumDrop: /usr/lib/libm.so
 ChecksumDrop: CMakeFiles/ChecksumDrop.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ChecksumDrop"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable ChecksumDrop"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ChecksumDrop.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

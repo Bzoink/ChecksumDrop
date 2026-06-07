@@ -259,6 +259,115 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build.make _deps/raylib-build/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+#=============================================================================
+# Target rules for targets named blake3
+
+# Build rule for target.
+blake3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 blake3
+.PHONY : blake3
+
+# fast build rule for target.
+blake3/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/blake3-build/CMakeFiles/blake3.dir/build.make _deps/blake3-build/CMakeFiles/blake3.dir/build
+.PHONY : blake3/fast
+
+lib/hash/md5.o: lib/hash/md5.c.o
+.PHONY : lib/hash/md5.o
+
+# target to build an object file
+lib/hash/md5.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o
+.PHONY : lib/hash/md5.c.o
+
+lib/hash/md5.i: lib/hash/md5.c.i
+.PHONY : lib/hash/md5.i
+
+# target to preprocess a source file
+lib/hash/md5.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.i
+.PHONY : lib/hash/md5.c.i
+
+lib/hash/md5.s: lib/hash/md5.c.s
+.PHONY : lib/hash/md5.s
+
+# target to generate assembly for a file
+lib/hash/md5.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.s
+.PHONY : lib/hash/md5.c.s
+
+lib/hash/sha1.o: lib/hash/sha1.c.o
+.PHONY : lib/hash/sha1.o
+
+# target to build an object file
+lib/hash/sha1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o
+.PHONY : lib/hash/sha1.c.o
+
+lib/hash/sha1.i: lib/hash/sha1.c.i
+.PHONY : lib/hash/sha1.i
+
+# target to preprocess a source file
+lib/hash/sha1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.i
+.PHONY : lib/hash/sha1.c.i
+
+lib/hash/sha1.s: lib/hash/sha1.c.s
+.PHONY : lib/hash/sha1.s
+
+# target to generate assembly for a file
+lib/hash/sha1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.s
+.PHONY : lib/hash/sha1.c.s
+
+lib/hash/sha2.o: lib/hash/sha2.c.o
+.PHONY : lib/hash/sha2.o
+
+# target to build an object file
+lib/hash/sha2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o
+.PHONY : lib/hash/sha2.c.o
+
+lib/hash/sha2.i: lib/hash/sha2.c.i
+.PHONY : lib/hash/sha2.i
+
+# target to preprocess a source file
+lib/hash/sha2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.i
+.PHONY : lib/hash/sha2.c.i
+
+lib/hash/sha2.s: lib/hash/sha2.c.s
+.PHONY : lib/hash/sha2.s
+
+# target to generate assembly for a file
+lib/hash/sha2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.s
+.PHONY : lib/hash/sha2.c.s
+
+lib/hash/sha3.o: lib/hash/sha3.c.o
+.PHONY : lib/hash/sha3.o
+
+# target to build an object file
+lib/hash/sha3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o
+.PHONY : lib/hash/sha3.c.o
+
+lib/hash/sha3.i: lib/hash/sha3.c.i
+.PHONY : lib/hash/sha3.i
+
+# target to preprocess a source file
+lib/hash/sha3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.i
+.PHONY : lib/hash/sha3.c.i
+
+lib/hash/sha3.s: lib/hash/sha3.c.s
+.PHONY : lib/hash/sha3.s
+
+# target to generate assembly for a file
+lib/hash/sha3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.s
+.PHONY : lib/hash/sha3.c.s
+
 lib/inih/ini.o: lib/inih/ini.c.o
 .PHONY : lib/inih/ini.o
 
@@ -282,6 +391,78 @@ lib/inih/ini.s: lib/inih/ini.c.s
 lib/inih/ini.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/inih.dir/build.make CMakeFiles/inih.dir/lib/inih/ini.c.s
 .PHONY : lib/inih/ini.c.s
+
+src/checksum_method.o: src/checksum_method.c.o
+.PHONY : src/checksum_method.o
+
+# target to build an object file
+src/checksum_method.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o
+.PHONY : src/checksum_method.c.o
+
+src/checksum_method.i: src/checksum_method.c.i
+.PHONY : src/checksum_method.i
+
+# target to preprocess a source file
+src/checksum_method.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.i
+.PHONY : src/checksum_method.c.i
+
+src/checksum_method.s: src/checksum_method.c.s
+.PHONY : src/checksum_method.s
+
+# target to generate assembly for a file
+src/checksum_method.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.s
+.PHONY : src/checksum_method.c.s
+
+src/crc32.o: src/crc32.c.o
+.PHONY : src/crc32.o
+
+# target to build an object file
+src/crc32.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/crc32.c.o
+.PHONY : src/crc32.c.o
+
+src/crc32.i: src/crc32.c.i
+.PHONY : src/crc32.i
+
+# target to preprocess a source file
+src/crc32.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/crc32.c.i
+.PHONY : src/crc32.c.i
+
+src/crc32.s: src/crc32.c.s
+.PHONY : src/crc32.s
+
+# target to generate assembly for a file
+src/crc32.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/crc32.c.s
+.PHONY : src/crc32.c.s
+
+src/hashing.o: src/hashing.c.o
+.PHONY : src/hashing.o
+
+# target to build an object file
+src/hashing.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/hashing.c.o
+.PHONY : src/hashing.c.o
+
+src/hashing.i: src/hashing.c.i
+.PHONY : src/hashing.i
+
+# target to preprocess a source file
+src/hashing.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/hashing.c.i
+.PHONY : src/hashing.c.i
+
+src/hashing.s: src/hashing.c.s
+.PHONY : src/hashing.s
+
+# target to generate assembly for a file
+src/hashing.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/hashing.c.s
+.PHONY : src/hashing.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -348,12 +529,34 @@ help:
 	@echo "... uninstall"
 	@echo "... update_mappings"
 	@echo "... ChecksumDrop"
+	@echo "... blake3"
 	@echo "... glfw"
 	@echo "... inih"
 	@echo "... raylib"
+	@echo "... lib/hash/md5.o"
+	@echo "... lib/hash/md5.i"
+	@echo "... lib/hash/md5.s"
+	@echo "... lib/hash/sha1.o"
+	@echo "... lib/hash/sha1.i"
+	@echo "... lib/hash/sha1.s"
+	@echo "... lib/hash/sha2.o"
+	@echo "... lib/hash/sha2.i"
+	@echo "... lib/hash/sha2.s"
+	@echo "... lib/hash/sha3.o"
+	@echo "... lib/hash/sha3.i"
+	@echo "... lib/hash/sha3.s"
 	@echo "... lib/inih/ini.o"
 	@echo "... lib/inih/ini.i"
 	@echo "... lib/inih/ini.s"
+	@echo "... src/checksum_method.o"
+	@echo "... src/checksum_method.i"
+	@echo "... src/checksum_method.s"
+	@echo "... src/crc32.o"
+	@echo "... src/crc32.i"
+	@echo "... src/crc32.s"
+	@echo "... src/hashing.o"
+	@echo "... src/hashing.i"
+	@echo "... src/hashing.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -5,7 +5,8 @@
 		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-build/cmake_install.cmake",
 		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-build/raylib/cmake_install.cmake",
 		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-build/raylib/external/glfw/cmake_install.cmake",
-		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-build/raylib/external/glfw/src/cmake_install.cmake"
+		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/raylib-build/raylib/external/glfw/src/cmake_install.cmake",
+		"/home/tony/Code/ChecksumDrop/ChecksumDropC/build/linux/_deps/blake3-build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

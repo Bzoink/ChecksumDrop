@@ -3,9 +3,17 @@ ChecksumDrop: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtbeginS.o \
   CMakeFiles/ChecksumDrop.dir/src/main.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/crc32.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/hashing.c.o \
+  CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o \
+  CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o \
+  CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o \
+  CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o \
   CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o \
   _deps/raylib-build/raylib/libraylib.a \
   libinih.a \
+  _deps/blake3-build/libblake3.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
@@ -76,11 +84,27 @@ ChecksumDrop: \
 
 CMakeFiles/ChecksumDrop.dir/src/main.c.o:
 
+CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o:
+
+CMakeFiles/ChecksumDrop.dir/src/crc32.c.o:
+
+CMakeFiles/ChecksumDrop.dir/src/hashing.c.o:
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o:
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o:
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o:
+
+CMakeFiles/ChecksumDrop.dir/lib/hash/sha3.c.o:
+
 CMakeFiles/ChecksumDrop.dir/src/x11_dnd.c.o:
 
 _deps/raylib-build/raylib/libraylib.a:
 
 libinih.a:
+
+_deps/blake3-build/libblake3.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so:
 
