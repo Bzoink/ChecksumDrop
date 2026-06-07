@@ -21,6 +21,7 @@
 #include "processor.h"
 #include "path_utils.h"
 #include "settings.h"
+#include "inter_font.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -35,6 +36,16 @@
 #define MKDIR(d) mkdir(d, 0777)
 #define RMDIR(d) rmdir(d)
 #endif
+
+static void draw_text_custom(Font font, const char *text, int x, int y, int size, Color color) {
+    Vector2 pos = { (float)x, (float)y };
+    DrawTextEx(font, text, pos, (float)size, 1.0f, color);
+}
+
+static int measure_text_custom(Font font, const char *text, int size) {
+    Vector2 size_vec = MeasureTextEx(font, text, (float)size, 1.0f);
+    return (int)size_vec.x;
+}
 
 /* ── Window & palette (ChecksumDrop dark theme) ──────────────────────────── */
 #define WINDOW_WIDTH  720
@@ -618,6 +629,25 @@ int main(int argc, char **argv)
     GuiSetStyle(DEFAULT, TEXT_COLOR_FOCUSED, ColorToInt(TEXT_COLOR));
     GuiSetStyle(DEFAULT, TEXT_COLOR_PRESSED, ColorToInt(TEXT_COLOR));
 
+    /* Since raygui buttons are light-colored by default, their text must be black for visibility */
+    GuiSetStyle(BUTTON, TEXT_COLOR_NORMAL,  ColorToInt(BLACK));
+    GuiSetStyle(BUTTON, TEXT_COLOR_FOCUSED, ColorToInt(BLACK));
+    GuiSetStyle(BUTTON, TEXT_COLOR_PRESSED, ColorToInt(BLACK));
+
+    /* Load custom embedded premium font (Inter) for gorgeous text and excellent UTF-8 coverage */
+    int codepoints[512];
+    int codepoint_count = 0;
+    for (int i = 32; i < 127; i++) codepoints[codepoint_count++] = i;
+    for (int i = 160; i < 256; i++) codepoints[codepoint_count++] = i;
+    for (int i = 256; i < 384; i++) codepoints[codepoint_count++] = i;
+
+    Font app_font = LoadFontFromMemory(".ttf", inter_regular_ttf, (int)inter_regular_ttf_len, 20, codepoints, codepoint_count);
+    
+    /* Set texture filtering for ultra-smooth scaling of the TrueType font */
+    SetTextureFilter(app_font.texture, TEXTURE_FILTER_BILINEAR);
+
+    GuiSetFont(app_font);
+
     static AppState st = {0};
     st.screen = SCREEN_MAIN;
     settings_load(&st);
@@ -636,8 +666,8 @@ int main(int argc, char **argv)
 
         if (st.screen == SCREEN_MAIN) {
             /* Title. */
-            DrawText("ChecksumDrop", 24, 20, 26, TEXT_COLOR);
-            DrawText("Fast, cross-platform hash generator & validation engine", 24, 54, 14, BORDER_COLOR);
+            draw_text_custom(app_font, "ChecksumDrop", 24, 20, 26, TEXT_COLOR);
+            draw_text_custom(app_font, "Fast, cross-platform hash generator & validation engine", 24, 54, 14, BORDER_COLOR);
 
             /* Drop zone panel. */
             const int pad = 24;
@@ -649,8 +679,8 @@ int main(int argc, char **argv)
 
             if (st.busy) {
                 /* Render active running view content */
-                DrawText(st.main_text, (int)(zone.x + 24), (int)(zone.y + 24), 20, TEXT_COLOR);
-                DrawText(st.sub_text, (int)(zone.x + zone.width - 150), (int)(zone.y + 24), 16, ACCENT_COLOR);
+                draw_text_custom(app_font, st.main_text, (int)(zone.x + 24), (int)(zone.y + 24), 20, TEXT_COLOR);
+                draw_text_custom(app_font, st.sub_text, (int)(zone.x + zone.width - 150), (int)(zone.y + 24), 16, ACCENT_COLOR);
 
                 /* Progress bar track */
                 Rectangle prog_track = { zone.x + 24, zone.y + 114, zone.width - 48, 14 };
@@ -665,7 +695,7 @@ int main(int argc, char **argv)
                 DrawRectangleRec(prog_fill, ACCENT_COLOR);
 
                 /* Filename / fineprint */
-                DrawText(st.sub_sub_text, (int)(zone.x + 24), (int)(zone.y + 74), 13, BORDER_COLOR);
+                draw_text_custom(app_font, st.sub_sub_text, (int)(zone.x + 24), (int)(zone.y + 74), 13, BORDER_COLOR);
 
                 /* Cancel command button */
                 Rectangle cancel_btn = { (float)(w - 148), (float)(h - 60), 124.0f, 36.0f };
@@ -674,10 +704,10 @@ int main(int argc, char **argv)
                 }
             } else if (st.done) {
                 /* Render finished view content */
-                DrawText(st.main_text, (int)(zone.x + 24), (int)(zone.y + 24), 22, (Color){ 0x30, 0xC8, 0x5D, 0xFF });
-                DrawText(st.sub_text, (int)(zone.x + 24), (int)(zone.y + 54), 16, TEXT_COLOR);
-                DrawText(st.sub_sub_text, (int)(zone.x + 24), (int)(zone.y + 80), 13, BORDER_COLOR);
-                DrawText(st.status_text, (int)(zone.x + 24), (int)(zone.y + 104), 12, BORDER_COLOR);
+                draw_text_custom(app_font, st.main_text, (int)(zone.x + 24), (int)(zone.y + 24), 22, (Color){ 0x30, 0xC8, 0x5D, 0xFF });
+                draw_text_custom(app_font, st.sub_text, (int)(zone.x + 24), (int)(zone.y + 54), 16, TEXT_COLOR);
+                draw_text_custom(app_font, st.sub_sub_text, (int)(zone.x + 24), (int)(zone.y + 80), 13, BORDER_COLOR);
+                draw_text_custom(app_font, st.status_text, (int)(zone.x + 24), (int)(zone.y + 104), 12, BORDER_COLOR);
 
                 /* Reset button */
                 Rectangle reset_btn = { zone.x + zone.width / 2 - 60, zone.y + 130, 120, 32 };
@@ -687,19 +717,19 @@ int main(int argc, char **argv)
                 }
             } else {
                 /* Render ready/prompt view content */
-                DrawText("↓", (int)(zone.x + zone.width / 2 - 10), (int)(zone.y + 30), 32, ACCENT_COLOR);
+                draw_text_custom(app_font, "↓", (int)(zone.x + zone.width / 2 - 10), (int)(zone.y + 30), 32, ACCENT_COLOR);
                 
                 const char *prompt = "Drop files or folders anywhere in this panel";
-                int tw = MeasureText(prompt, 18);
-                DrawText(prompt, (int)(zone.x + (zone.width - tw) / 2), (int)(zone.y + 80), 18, TEXT_COLOR);
+                int tw = measure_text_custom(app_font, prompt, 18);
+                draw_text_custom(app_font, prompt, (int)(zone.x + (zone.width - tw) / 2), (int)(zone.y + 80), 18, TEXT_COLOR);
 
                 const char *fine = "Or drop existing checksum files (.sfv, .md5, etc.) to validate";
-                int tf = MeasureText(fine, 13);
-                DrawText(fine, (int)(zone.x + (zone.width - tf) / 2), (int)(zone.y + 114), 13, BORDER_COLOR);
+                int tf = measure_text_custom(app_font, fine, 13);
+                draw_text_custom(app_font, fine, (int)(zone.x + (zone.width - tf) / 2), (int)(zone.y + 114), 13, BORDER_COLOR);
             }
 
             /* Hashing method section */
-            DrawText("Active Hashing Algorithm", 24, 290, 14, ACCENT_COLOR);
+            draw_text_custom(app_font, "Active Hashing Algorithm", 24, 290, 14, ACCENT_COLOR);
 
             float col_w = (float)(w - 48 - 24) / 4.0f;
             float row_h = 36.0f;
@@ -716,8 +746,8 @@ int main(int argc, char **argv)
                     DrawRectangleLinesEx(btn_rec, 2.0f, ACCENT_COLOR);
 
                     const char *text = checksum_method_to_display_name((ChecksumMethod)i);
-                    int text_w = MeasureText(text, 14);
-                    DrawText(text, (int)(btn_rec.x + (btn_rec.width - text_w) / 2), (int)(btn_rec.y + 11), 14, TEXT_COLOR);
+                    int text_w = measure_text_custom(app_font, text, 14);
+                    draw_text_custom(app_font, text, (int)(btn_rec.x + (btn_rec.width - text_w) / 2), (int)(btn_rec.y + 11), 14, TEXT_COLOR);
                 } else {
                     if (GuiButton(btn_rec, checksum_method_to_display_name((ChecksumMethod)i))) {
                         st.method = (ChecksumMethod)i;
@@ -728,7 +758,7 @@ int main(int argc, char **argv)
 
             /* Bottom bar */
             float bottom_y = (float)(h - 52);
-            DrawText("Config path: ~/.config/ChecksumDrop/settings.ini", 24, (int)(bottom_y + 12), 12, BORDER_COLOR);
+            draw_text_custom(app_font, "Config path: ~/.config/ChecksumDrop/settings.ini", 24, (int)(bottom_y + 12), 12, BORDER_COLOR);
 
             Rectangle about_btn = { (float)(w - 124), bottom_y, 100.0f, 32.0f };
             if (GuiButton(about_btn, "About")) {
@@ -737,11 +767,11 @@ int main(int argc, char **argv)
         } 
         else if (st.screen == SCREEN_RESULTS) {
             /* Title. */
-            DrawText("Validation Results", 24, 20, 26, TEXT_COLOR);
+            draw_text_custom(app_font, "Validation Results", 24, 20, 26, TEXT_COLOR);
             
             char sum_text[256];
             snprintf(sum_text, sizeof(sum_text), "Checked %d files from %d checksum digests.", st.summary.total_files, st.summary.total_digests);
-            DrawText(sum_text, 24, 54, 14, BORDER_COLOR);
+            draw_text_custom(app_font, sum_text, 24, 54, 14, BORDER_COLOR);
 
             /* Summary stats tiles */
             float tile_w = (float)(w - 48 - 36) / 4.0f;
@@ -752,34 +782,34 @@ int main(int argc, char **argv)
             Rectangle r0 = { 24.0f, tile_y, tile_w, tile_h };
             DrawRectangleRec(r0, PANEL_COLOR);
             DrawRectangleLinesEx(r0, 1.0f, BORDER_COLOR);
-            DrawText("Total Files", (int)(r0.x + 12), (int)(r0.y + 10), 11, BORDER_COLOR);
+            draw_text_custom(app_font, "Total Files", (int)(r0.x + 12), (int)(r0.y + 10), 11, BORDER_COLOR);
             char score_str[32];
             snprintf(score_str, sizeof(score_str), "%d", st.summary.total_files);
-            DrawText(score_str, (int)(r0.x + 12), (int)(r0.y + 26), 20, TEXT_COLOR);
+            draw_text_custom(app_font, score_str, (int)(r0.x + 12), (int)(r0.y + 26), 20, TEXT_COLOR);
 
             /* Tile 1: Valid */
             Rectangle r1 = { 24.0f + tile_w + 12.0f, tile_y, tile_w, tile_h };
             DrawRectangleRec(r1, PANEL_COLOR);
             DrawRectangleLinesEx(r1, 1.0f, BORDER_COLOR);
-            DrawText("Valid", (int)(r1.x + 12), (int)(r1.y + 10), 11, BORDER_COLOR);
+            draw_text_custom(app_font, "Valid", (int)(r1.x + 12), (int)(r1.y + 10), 11, BORDER_COLOR);
             snprintf(score_str, sizeof(score_str), "%d", st.summary.total_valid);
-            DrawText(score_str, (int)(r1.x + 12), (int)(r1.y + 26), 20, (Color){ 0x30, 0xC8, 0x5D, 0xFF });
+            draw_text_custom(app_font, score_str, (int)(r1.x + 12), (int)(r1.y + 26), 20, (Color){ 0x30, 0xC8, 0x5D, 0xFF });
 
             /* Tile 2: Missing */
             Rectangle r2 = { 24.0f + (tile_w + 12.0f) * 2.0f, tile_y, tile_w, tile_h };
             DrawRectangleRec(r2, PANEL_COLOR);
             DrawRectangleLinesEx(r2, 1.0f, BORDER_COLOR);
-            DrawText("Missing", (int)(r2.x + 12), (int)(r2.y + 10), 11, BORDER_COLOR);
+            draw_text_custom(app_font, "Missing", (int)(r2.x + 12), (int)(r2.y + 10), 11, BORDER_COLOR);
             snprintf(score_str, sizeof(score_str), "%d", st.summary.total_not_found);
-            DrawText(score_str, (int)(r2.x + 12), (int)(r2.y + 26), 20, (Color){ 0xFA, 0xBC, 0x2A, 0xFF });
+            draw_text_custom(app_font, score_str, (int)(r2.x + 12), (int)(r2.y + 26), 20, (Color){ 0xFA, 0xBC, 0x2A, 0xFF });
 
             /* Tile 3: Corrupt */
             Rectangle r3 = { 24.0f + (tile_w + 12.0f) * 3.0f, tile_y, tile_w, tile_h };
             DrawRectangleRec(r3, PANEL_COLOR);
             DrawRectangleLinesEx(r3, 1.0f, BORDER_COLOR);
-            DrawText("Corrupt", (int)(r3.x + 12), (int)(r3.y + 10), 11, BORDER_COLOR);
+            draw_text_custom(app_font, "Corrupt", (int)(r3.x + 12), (int)(r3.y + 10), 11, BORDER_COLOR);
             snprintf(score_str, sizeof(score_str), "%d", st.summary.total_invalid);
-            DrawText(score_str, (int)(r3.x + 12), (int)(r3.y + 26), 20, (Color){ 0xE0, 0x48, 0x48, 0xFF });
+            draw_text_custom(app_font, score_str, (int)(r3.x + 12), (int)(r3.y + 26), 20, (Color){ 0xE0, 0x48, 0x48, 0xFF });
 
             /* Scrollable results panel */
             Rectangle results_rect = { 24.0f, 160.0f, (float)(w - 48), (float)(h - 225) };
@@ -819,25 +849,25 @@ int main(int argc, char **argv)
                     status_label = "[BAD ]";
                 }
 
-                DrawText(status_label, (int)(results_rect.x + 12), item_y, 14, status_color);
-                DrawText(res->filename, (int)(results_rect.x + 72), item_y, 14, TEXT_COLOR);
+                draw_text_custom(app_font, status_label, (int)(results_rect.x + 12), item_y, 14, status_color);
+                draw_text_custom(app_font, res->filename, (int)(results_rect.x + 72), item_y, 14, TEXT_COLOR);
 
                 /* Hash, truncated/positioned right */
-                int label_w = MeasureText(res->filename, 14);
+                int label_w = measure_text_custom(app_font, res->filename, 14);
                 int hash_x = (int)(results_rect.x + 72 + label_w + 16);
                 if (hash_x < results_rect.x + results_rect.width - 240) {
-                    DrawText(res->hash, hash_x, item_y + 1, 11, BORDER_COLOR);
+                    draw_text_custom(app_font, res->hash, hash_x, item_y + 1, 11, BORDER_COLOR);
                 }
                 
                 /* Draw hash algorithm display type */
-                int method_w = MeasureText(res->method, 11);
-                DrawText(res->method, (int)(results_rect.x + results_rect.width - method_w - 16), item_y + 1, 11, BORDER_COLOR);
+                int method_w = measure_text_custom(app_font, res->method, 11);
+                draw_text_custom(app_font, res->method, (int)(results_rect.x + results_rect.width - method_w - 16), item_y + 1, 11, BORDER_COLOR);
 
                 draw_count++;
             }
 
             if (st.result_count == 0) {
-                DrawText("(no files checked)", (int)(results_rect.x + 24), (int)(results_rect.y + 24), 14, BORDER_COLOR);
+                draw_text_custom(app_font, "(no files checked)", (int)(results_rect.x + 24), (int)(results_rect.y + 24), 14, BORDER_COLOR);
             }
 
             /* Bottom bar close back button */
@@ -855,29 +885,29 @@ int main(int argc, char **argv)
         }
         else if (st.screen == SCREEN_ABOUT) {
             /* Title. */
-            DrawText("About ChecksumDrop", 24, 20, 26, TEXT_COLOR);
-            DrawText("Application details & technology stack", 24, 54, 14, BORDER_COLOR);
+            draw_text_custom(app_font, "About ChecksumDrop", 24, 20, 26, TEXT_COLOR);
+            draw_text_custom(app_font, "Application details & technology stack", 24, 54, 14, BORDER_COLOR);
 
             Rectangle text_rect = { 24.0f, 85.0f, (float)(w - 48), (float)(h - 150) };
             DrawRectangleRec(text_rect, PANEL_COLOR);
             DrawRectangleLinesEx(text_rect, 1.0f, BORDER_COLOR);
 
             int start_y = (int)(text_rect.y + 24);
-            DrawText("ChecksumDrop", (int)(text_rect.x + 24), start_y, 22, ACCENT_COLOR);
-            DrawText("Version 1.1 (Standard C11 Rewrite)", (int)(text_rect.x + 24), start_y + 28, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "ChecksumDrop", (int)(text_rect.x + 24), start_y, 22, ACCENT_COLOR);
+            draw_text_custom(app_font, "Version 1.1 (Standard C11 Rewrite)", (int)(text_rect.x + 24), start_y + 28, 14, TEXT_COLOR);
 
-            DrawText("A lightning-fast, premium desktop utility developed for immediate", (int)(text_rect.x + 24), start_y + 70, 14, TEXT_COLOR);
-            DrawText("launch and maximum security hash generation and verification.", (int)(text_rect.x + 24), start_y + 90, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "A lightning-fast, premium desktop utility developed for immediate", (int)(text_rect.x + 24), start_y + 70, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "launch and maximum security hash generation and verification.", (int)(text_rect.x + 24), start_y + 90, 14, TEXT_COLOR);
 
-            DrawText("This native Linux/Windows C port fully replaces the previous", (int)(text_rect.x + 24), start_y + 120, 14, TEXT_COLOR);
-            DrawText(".NET/Avalonia implementation to eliminate drag-and-drop", (int)(text_rect.x + 24), start_y + 140, 14, TEXT_COLOR);
-            DrawText("intercompatibility issues under Linux X11 desktops by native integration.", (int)(text_rect.x + 24), start_y + 160, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "This native Linux/Windows C port fully replaces the previous", (int)(text_rect.x + 24), start_y + 120, 14, TEXT_COLOR);
+            draw_text_custom(app_font, ".NET/Avalonia implementation to eliminate drag-and-drop", (int)(text_rect.x + 24), start_y + 140, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "intercompatibility issues under Linux X11 desktops by native integration.", (int)(text_rect.x + 24), start_y + 160, 14, TEXT_COLOR);
 
-            DrawText("Core Assemblies:", (int)(text_rect.x + 24), start_y + 195, 14, ACCENT_COLOR);
-            DrawText("• raylib & raygui — UI layout panels and hardware fluid canvas rendering.", (int)(text_rect.x + 24), start_y + 215, 14, TEXT_COLOR);
-            DrawText("• blake3_simd — Hand-crafted AVX-512 & AVX2 standard hardware acceleration.", (int)(text_rect.x + 24), start_y + 235, 14, TEXT_COLOR);
-            DrawText("• inih — Ben Hoyt's simple robust settings file format parsing library.", (int)(text_rect.x + 24), start_y + 255, 14, TEXT_COLOR);
-            DrawText("• hash_libs — md5, sha1, sha2, sha3, xxhash & endian-safe crc32 libraries.", (int)(text_rect.x + 24), start_y + 275, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "Core Assemblies:", (int)(text_rect.x + 24), start_y + 195, 14, ACCENT_COLOR);
+            draw_text_custom(app_font, "• raylib & raygui — UI layout panels and hardware fluid canvas rendering.", (int)(text_rect.x + 24), start_y + 215, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "• blake3_simd — Hand-crafted AVX-512 & AVX2 standard hardware acceleration.", (int)(text_rect.x + 24), start_y + 235, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "• inih — Ben Hoyt's simple robust settings file format parsing library.", (int)(text_rect.x + 24), start_y + 255, 14, TEXT_COLOR);
+            draw_text_custom(app_font, "• hash_libs — md5, sha1, sha2, sha3, xxhash & endian-safe crc32 libraries.", (int)(text_rect.x + 24), start_y + 275, 14, TEXT_COLOR);
 
             /* Back button */
             Rectangle back_btn = { (float)(w - 124), (float)(h - 52), 100.0f, 32.0f };
@@ -893,6 +923,8 @@ int main(int argc, char **argv)
     if (st.results) {
         free(st.results);
     }
+
+    UnloadFont(app_font);
 
     CloseWindow();
     return 0;
