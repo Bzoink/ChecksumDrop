@@ -1,65 +1,22 @@
 #!/usr/bin/env bash
+# build.sh — ChecksumDrop top-level build helper
+#
+# ChecksumDrop is migrating from .NET/Avalonia to a C (raylib + raygui) port
+# that lives in the ChecksumDropC/ subfolder. This script now forwards to that
+# subfolder's build so the C app is the one built from the repo root.
+#
+# Usage: ./build.sh [clean|linux|windows|osx|all]
+#
+# When the migration is complete, the C port will move up to the repo root and
+# replace the old Avalonia project entirely. The previous .NET build script is
+# preserved at build-avalonia.sh for the duration of the transition.
 
-# Exit immediately if a command exits with a non-zero status
-set -e
+set -euo pipefail
 
-# Define directories
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-PROJECT_PATH="${SCRIPT_DIR}/ChecksumDrop.Avalonia/ChecksumDrop.Avalonia.csproj"
-PUBLISH_DIR="${SCRIPT_DIR}/publish"
+C_BUILD="${SCRIPT_DIR}/ChecksumDropC/build.sh"
 
-show_usage() {
-    echo "Usage: $0 {linux|windows|clean}"
-    echo "  linux   - Build and publish for Linux (linux-x64, framework-dependent)"
-    echo "  windows - Cross-compile and publish for Windows (win-x64, framework-dependent)"
-    echo "  clean   - Clean build and publish artifacts"
-    exit 1
-}
+[[ -f "$C_BUILD" ]] || { echo "error: $C_BUILD not found" >&2; exit 1; }
+[[ -x "$C_BUILD" ]] || chmod +x "$C_BUILD" 2>/dev/null || true
 
-if [ $# -lt 1 ]; then
-    show_usage
-fi
-
-case "$1" in
-    linux)
-        echo "Building ChecksumDrop for Linux (x64, framework-dependent)..."
-        dotnet publish "${PROJECT_PATH}" \
-            -c Release \
-            -r linux-x64 \
-            --self-contained false \
-            -p:PublishSingleFile=true \
-            -p:PublishReadyToRun=true \
-            -o "${PUBLISH_DIR}/linux-x64"
-        echo "Linux build completed successfully!"
-        echo "Output directory: ${PUBLISH_DIR}/linux-x64"
-        ;;
-    windows)
-        echo "Building ChecksumDrop for Windows (x64, cross-compilation, framework-dependent)..."
-        dotnet publish "${PROJECT_PATH}" \
-            -c Release \
-            -r win-x64 \
-            --self-contained false \
-            -p:PublishSingleFile=true \
-            -p:PublishReadyToRun=true \
-            -o "${PUBLISH_DIR}/win-x64"
-        echo "Windows build completed successfully!"
-        echo "Output directory: ${PUBLISH_DIR}/win-x64"
-        ;;
-    clean)
-        echo "Cleaning build and publish artifacts..."
-        # Clean via dotnet
-        dotnet clean "${PROJECT_PATH}" -c Release || true
-        dotnet clean "${SCRIPT_DIR}/ChecksumDrop.Core/ChecksumDrop.Core.csproj" -c Release || true
-        
-        # Clean build output directories manually to ensure fresh builds
-        echo "Removing bin, obj, and publish directories..."
-        rm -rf "${PUBLISH_DIR}"
-        rm -rf "${SCRIPT_DIR}/ChecksumDrop.Avalonia/bin" "${SCRIPT_DIR}/ChecksumDrop.Avalonia/obj"
-        rm -rf "${SCRIPT_DIR}/ChecksumDrop.Core/bin" "${SCRIPT_DIR}/ChecksumDrop.Core/obj"
-        
-        echo "Clean completed successfully!"
-        ;;
-    *)
-        show_usage
-        ;;
-esac
+exec "$C_BUILD" "$@"

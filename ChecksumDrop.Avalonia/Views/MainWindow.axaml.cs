@@ -1,3 +1,4 @@
+using System.Linq;
 using global::Avalonia.Controls;
 using global::Avalonia.Input;
 using ChecksumDrop.Avalonia.ViewModels;
@@ -9,6 +10,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+
         DragDrop.SetAllowDrop(DropZone, true);
         DropZone.AddHandler(DragDrop.DragOverEvent, DropZone_OnDragOver);
         DropZone.AddHandler(DragDrop.DropEvent, DropZone_OnDrop);
@@ -16,18 +18,29 @@ public partial class MainWindow : Window
 
     private void DropZone_OnDragOver(object? sender, DragEventArgs e)
     {
-        e.DragEffects = DragDropEffects.Copy;
+        e.DragEffects = e.Data.Contains(DataFormats.Files)
+            ? DragDropEffects.Copy
+            : DragDropEffects.None;
     }
 
     private async void DropZone_OnDrop(object? sender, DragEventArgs e)
     {
-        if (DataContext is MainWindowViewModel viewModel)
+        if (DataContext is not MainWindowViewModel viewModel)
         {
-            var items = e.DataTransfer.TryGetFiles();
-            if (items is not null)
-            {
-                await viewModel.HandleDropAsync(this, items);
-            }
+            return;
+        }
+
+        var files = e.Data.GetFiles();
+        if (files is null)
+        {
+            return;
+        }
+
+        var items = files.ToList();
+        if (items.Count > 0)
+        {
+            e.Handled = true;
+            await viewModel.HandleDropAsync(this, items);
         }
     }
 
