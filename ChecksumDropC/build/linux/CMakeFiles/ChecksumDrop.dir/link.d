@@ -6,6 +6,10 @@ ChecksumDrop: \
   CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o \
   CMakeFiles/ChecksumDrop.dir/src/crc32.c.o \
   CMakeFiles/ChecksumDrop.dir/src/hashing.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/path_utils.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/output_writer.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/processor.c.o \
+  CMakeFiles/ChecksumDrop.dir/src/settings.c.o \
   CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o \
   CMakeFiles/ChecksumDrop.dir/lib/hash/sha1.c.o \
   CMakeFiles/ChecksumDrop.dir/lib/hash/sha2.c.o \
@@ -89,6 +93,14 @@ CMakeFiles/ChecksumDrop.dir/src/checksum_method.c.o:
 CMakeFiles/ChecksumDrop.dir/src/crc32.c.o:
 
 CMakeFiles/ChecksumDrop.dir/src/hashing.c.o:
+
+CMakeFiles/ChecksumDrop.dir/src/path_utils.c.o:
+
+CMakeFiles/ChecksumDrop.dir/src/output_writer.c.o:
+
+CMakeFiles/ChecksumDrop.dir/src/processor.c.o:
+
+CMakeFiles/ChecksumDrop.dir/src/settings.c.o:
 
 CMakeFiles/ChecksumDrop.dir/lib/hash/md5.c.o:
 

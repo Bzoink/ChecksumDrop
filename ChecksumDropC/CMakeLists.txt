@@ -51,6 +51,10 @@ set(SOURCES
     src/checksum_method.c
     src/crc32.c
     src/hashing.c
+    src/path_utils.c
+    src/output_writer.c
+    src/processor.c
+    src/settings.c
     lib/hash/md5.c
     lib/hash/sha1.c
     lib/hash/sha2.c

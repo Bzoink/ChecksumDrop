@@ -488,6 +488,102 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/output_writer.o: src/output_writer.c.o
+.PHONY : src/output_writer.o
+
+# target to build an object file
+src/output_writer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/output_writer.c.o
+.PHONY : src/output_writer.c.o
+
+src/output_writer.i: src/output_writer.c.i
+.PHONY : src/output_writer.i
+
+# target to preprocess a source file
+src/output_writer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/output_writer.c.i
+.PHONY : src/output_writer.c.i
+
+src/output_writer.s: src/output_writer.c.s
+.PHONY : src/output_writer.s
+
+# target to generate assembly for a file
+src/output_writer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/output_writer.c.s
+.PHONY : src/output_writer.c.s
+
+src/path_utils.o: src/path_utils.c.o
+.PHONY : src/path_utils.o
+
+# target to build an object file
+src/path_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/path_utils.c.o
+.PHONY : src/path_utils.c.o
+
+src/path_utils.i: src/path_utils.c.i
+.PHONY : src/path_utils.i
+
+# target to preprocess a source file
+src/path_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/path_utils.c.i
+.PHONY : src/path_utils.c.i
+
+src/path_utils.s: src/path_utils.c.s
+.PHONY : src/path_utils.s
+
+# target to generate assembly for a file
+src/path_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/path_utils.c.s
+.PHONY : src/path_utils.c.s
+
+src/processor.o: src/processor.c.o
+.PHONY : src/processor.o
+
+# target to build an object file
+src/processor.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/processor.c.o
+.PHONY : src/processor.c.o
+
+src/processor.i: src/processor.c.i
+.PHONY : src/processor.i
+
+# target to preprocess a source file
+src/processor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/processor.c.i
+.PHONY : src/processor.c.i
+
+src/processor.s: src/processor.c.s
+.PHONY : src/processor.s
+
+# target to generate assembly for a file
+src/processor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/processor.c.s
+.PHONY : src/processor.c.s
+
+src/settings.o: src/settings.c.o
+.PHONY : src/settings.o
+
+# target to build an object file
+src/settings.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/settings.c.o
+.PHONY : src/settings.c.o
+
+src/settings.i: src/settings.c.i
+.PHONY : src/settings.i
+
+# target to preprocess a source file
+src/settings.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/settings.c.i
+.PHONY : src/settings.c.i
+
+src/settings.s: src/settings.c.s
+.PHONY : src/settings.s
+
+# target to generate assembly for a file
+src/settings.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChecksumDrop.dir/build.make CMakeFiles/ChecksumDrop.dir/src/settings.c.s
+.PHONY : src/settings.c.s
+
 src/x11_dnd.o: src/x11_dnd.c.o
 .PHONY : src/x11_dnd.o
 
@@ -560,6 +656,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/output_writer.o"
+	@echo "... src/output_writer.i"
+	@echo "... src/output_writer.s"
+	@echo "... src/path_utils.o"
+	@echo "... src/path_utils.i"
+	@echo "... src/path_utils.s"
+	@echo "... src/processor.o"
+	@echo "... src/processor.i"
+	@echo "... src/processor.s"
+	@echo "... src/settings.o"
+	@echo "... src/settings.i"
+	@echo "... src/settings.s"
 	@echo "... src/x11_dnd.o"
 	@echo "... src/x11_dnd.i"
 	@echo "... src/x11_dnd.s"
