@@ -28,6 +28,9 @@ Log.txt
 .DS_Store
 Thumbs.db
 
+# Claude Code
+CLAUDE.md
+
 # CMake / Native Build
 [Bb]uild/
 CMakeCache.txt
